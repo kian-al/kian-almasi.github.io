@@ -2,9 +2,864 @@
 layout: null
 ---
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Kian Almasi — Backend Software Engineer specializing in .NET, enterprise architecture, Oracle, HIS and fintech systems."><title>Kian Almasi — Backend Software Engineer</title><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"><link rel="stylesheet" href="{{ '/styles.css' | relative_url }}"><link rel="stylesheet" href="{{ '/assets/css/portfolio-clean.css' | relative_url }}"><link rel="stylesheet" href="{{ '/assets/css/features.css' | relative_url }}"><script src="{{ '/assets/js/features.js' | relative_url }}" defer></script></head><body><div class="grain"></div><div class="aurora"><i></i><i></i><i></i></div><div id="glow"></div><header class="nav"><a class="brand" href="#top" aria-label="Kian Almasi home">KA</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu</button><nav id="primary-nav" aria-label="Primary navigation"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#github">GitHub</a><a href="#skills">Skills</a><a href="#background">Background</a><a href="#contact">Contact</a></nav></header><main id="top"><section class="hero"><div class="hero-copy"><div class="hero-top"><span class="pulse-badge"><i></i>open to work</span><p class="eyebrow">Backend Software Engineer · .NET</p></div><h1>Kian Almasi</h1><p class="lead">C#/.NET engineer specializing in Clean Architecture, CQRS, and DDD — delivering multi-tenant SaaS platforms, enterprise IAM, audit pipelines, and high-throughput Oracle data systems.</p><div class="cta"><a class="button primary" href="mailto:kianalmasi0@gmail.com">Contact me</a><a class="button" href="https://github.com/kian-al" target="_blank" rel="noreferrer">GitHub</a><a class="button" href="https://www.linkedin.com/in/kian-almasi" target="_blank" rel="noreferrer">LinkedIn</a></div></div><aside class="photo-card"><figure><img src="assets/kian.jpg" alt="Kian Almasi — Backend Software Engineer" width="480" height="600"></figure><div class="photo-meta"><strong>Kian Almasi · Backend Software Engineer</strong><div class="photo-tags"><span>.NET 8/10</span><span>Clean Architecture</span><span>CQRS · DDD</span><span>Oracle 19c</span></div></div></aside></section><section class="metrics"><article><strong>800k+</strong><span>financial records processed in ETL pipelines</span></article><article><strong>15+</strong><span>enterprise projects audited for architecture quality</span></article><article><strong>100%</strong><span>pass rate across automated xUnit test suites</span></article><article><strong>18.47/20</strong><span>Computer Engineering GPA</span></article></section><section id="focus" class="section"><p class="eyebrow">Focus areas</p><h2>What I work on</h2><div class="focus-grid"><article class="feature-card"><span class="feature-index">01 / Architecture</span><h3>Backend platforms</h3><p>Clean Architecture, CQRS and DDD for multi-tenant systems in healthcare, financial software and enterprise SaaS.</p></article><article class="feature-card"><span class="feature-index">02 / Security</span><h3>Identity &amp; auditing</h3><p>Access control, TOTP authentication, session revocation and reliable audit trails for enterprise applications.</p></article><article class="feature-card"><span class="feature-index">03 / Data</span><h3>Database performance</h3><p>Oracle PL/SQL tuning, EF Core read pipelines and batch processing for high-volume financial data.</p></article></div></section><section id="terminal" class="terminal-section"><div class="term-head"><h2 class="term-heading">Explore my resume</h2><p class="muted term-intro">Browse my experience and skills using the shortcuts below, or type a command.</p></div><div class="term-chips"><button data-cmd="about">about</button><button data-cmd="skills">skills</button><button data-cmd="projects">projects</button><button data-cmd="experience">experience</button><button data-cmd="education">education</button><button data-cmd="contact">contact</button><button data-cmd="help">help</button><button data-cmd="sudo hire-me" class="chip-hot">sudo hire-me</button></div><div class="terminal" id="term" aria-label="Interactive resume terminal"><div class="term-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="term-title">kian@backend: ~/resume — bash</span><span class="term-themes"><button class="swatch" data-accent="green" style="background:#7cf7bd" aria-label="green theme"></button><button class="swatch" data-accent="blue" style="background:#66d9ff" aria-label="blue theme"></button><button class="swatch" data-accent="amber" style="background:#ffd166" aria-label="amber theme"></button></span></div><div class="term-shell"><aside class="term-side" aria-hidden="true"><pre class="side-logo">┏━━━━━━━┓
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Kian Almasi — Backend Software Engineer specializing in .NET, enterprise architecture, Oracle, HIS and fintech systems."><title>Kian Almasi — Backend Software Engineer</title><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"><link rel="stylesheet" href="{{ '/styles.css' | relative_url }}"><link rel="stylesheet" href="{{ '/assets/css/portfolio-clean.css' | relative_url }}"><link rel="stylesheet" href="{{ '/assets/css/features.css' | relative_url }}"><script src="{{ '/assets/js/features.js' | relative_url }}" defer></script><link rel="stylesheet" href="{{ '/assets/css/calendar.css' | relative_url }}"><script src="{{ '/assets/js/calendar.js' | relative_url }}" defer></script></head><body><div class="grain"></div><div class="aurora"><i></i><i></i><i></i></div><div id="glow"></div><header class="nav"><a class="brand" href="#top" aria-label="Kian Almasi home">KA</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu</button><nav id="primary-nav" aria-label="Primary navigation"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#github">GitHub</a><a href="#skills">Skills</a><a href="#background">Background</a><a href="#contact">Contact</a></nav></header><main id="top"><section class="hero"><div class="hero-copy"><div class="hero-top"><span class="pulse-badge"><i></i>open to work</span><p class="eyebrow">Backend Software Engineer · .NET</p></div><h1>Kian Almasi</h1><p class="lead">C#/.NET engineer specializing in Clean Architecture, CQRS, and DDD — delivering multi-tenant SaaS platforms, enterprise IAM, audit pipelines, and high-throughput Oracle data systems.</p><div class="cta"><a class="button primary" href="mailto:kianalmasi0@gmail.com">Contact me</a><a class="button" href="https://github.com/kian-al" target="_blank" rel="noreferrer">GitHub</a><a class="button" href="https://www.linkedin.com/in/kian-almasi" target="_blank" rel="noreferrer">LinkedIn</a></div></div><aside class="photo-card"><figure><img src="assets/kian.jpg" alt="Kian Almasi — Backend Software Engineer" width="480" height="600"></figure><div class="photo-meta"><strong>Kian Almasi · Backend Software Engineer</strong><div class="photo-tags"><span>.NET 8/10</span><span>Clean Architecture</span><span>CQRS · DDD</span><span>Oracle 19c</span></div></div></aside></section><section class="metrics"><article><strong>800k+</strong><span>financial records processed in ETL pipelines</span></article><article><strong>15+</strong><span>enterprise projects audited for architecture quality</span></article><article><strong>100%</strong><span>pass rate across automated xUnit test suites</span></article><article><strong>18.47/20</strong><span>Computer Engineering GPA</span></article></section><section id="focus" class="section"><p class="eyebrow">Focus areas</p><h2>What I work on</h2><div class="focus-grid"><article class="feature-card"><span class="feature-index">01 / Architecture</span><h3>Backend platforms</h3><p>Clean Architecture, CQRS and DDD for multi-tenant systems in healthcare, financial software and enterprise SaaS.</p></article><article class="feature-card"><span class="feature-index">02 / Security</span><h3>Identity &amp; auditing</h3><p>Access control, TOTP authentication, session revocation and reliable audit trails for enterprise applications.</p></article><article class="feature-card"><span class="feature-index">03 / Data</span><h3>Database performance</h3><p>Oracle PL/SQL tuning, EF Core read pipelines and batch processing for high-volume financial data.</p></article></div></section><section id="terminal" class="terminal-section"><div class="term-head"><h2 class="term-heading">Explore my resume</h2><p class="muted term-intro">Browse my experience and skills using the shortcuts below, or type a command.</p></div><div class="term-chips"><button data-cmd="about">about</button><button data-cmd="skills">skills</button><button data-cmd="projects">projects</button><button data-cmd="experience">experience</button><button data-cmd="education">education</button><button data-cmd="contact">contact</button><button data-cmd="help">help</button><button data-cmd="sudo hire-me" class="chip-hot">sudo hire-me</button></div><div class="terminal" id="term" aria-label="Interactive resume terminal"><div class="term-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="term-title">kian@backend: ~/resume — bash</span><span class="term-themes"><button class="swatch" data-accent="green" style="background:#7cf7bd" aria-label="green theme"></button><button class="swatch" data-accent="blue" style="background:#66d9ff" aria-label="blue theme"></button><button class="swatch" data-accent="amber" style="background:#ffd166" aria-label="amber theme"></button></span></div><div class="term-shell"><aside class="term-side" aria-hidden="true"><pre class="side-logo">┏━━━━━━━┓
 ┃ K A  ┃
-┗━━━━━━━┛</pre><dl><div><dt>USER</dt><dd>kian-al</dd></div><div><dt>ROLE</dt><dd>Backend Engineer</dd></div><div><dt>RUNTIME</dt><dd>.NET 8/10 · JVM</dd></div><div><dt>ARCH</dt><dd>Clean · CQRS · DDD</dd></div><div><dt>DB</dt><dd>Oracle · PG · MSSQL</dd></div><div><dt>SECURITY</dt><dd>ABAC · TOTP · PBKDF2</dd></div><div><dt>GPA</dt><dd>18.47 / 20</dd></div></dl></aside><div class="term-main" id="term-body"><div id="term-output"></div><div class="term-input-line"><span class="prompt">kian@backend:~$</span><input id="term-input" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal command input" placeholder="try 'help' — or 'sudo hire-me'" /></div></div></div><div class="term-status"><span>⬢ .NET 10</span><span>⬢ Oracle 19c</span><span>⬢ xUnit: passing</span><span class="grow"></span><span>tip: ↑ for history · 'clear' to reset</span></div></div></section><section id="experience" class="section split"><div><p class="eyebrow mono-eyebrow">Experience</p><h2>Sanay System</h2><p class="muted">Backend Software Engineer (.NET) · Financial Systems & Hospital Information Systems</p></div><div class="timeline"><article><h3>Multi-tenant HIS Control Center</h3><p>Designed a strict Clean Architecture and CQRS backend with tenant isolation, health monitoring, API governance, and domain-focused concurrency handling.</p></article><article><h3>Security & auditing</h3><p>Built IAM capabilities including ABAC, TOTP, session revocation, PBKDF2 hashing, correlation tracking, and a Two-Flush Audit Pattern for reliable relational logs.</p></article><article><h3>Performance & data engineering</h3><p>Optimized Oracle PL/SQL queries, execution plans, EF Core read pipelines, DTO projections, pagination, filtering, and high-volume ETL workloads.</p></article></div></section><section id="projects" class="section"><p class="eyebrow mono-eyebrow">Selected projects</p><h2>Selected projects</h2><div class="project-filters" role="group" aria-label="Filter selected projects" hidden><button type="button" data-filter="all" aria-pressed="true">All projects</button><button type="button" data-filter="dotnet" aria-pressed="false">.NET</button><button type="button" data-filter="data" aria-pressed="false">Data</button><button type="button" data-filter="java" aria-pressed="false">Java</button><button type="button" data-filter="architecture" aria-pressed="false">Architecture</button></div><p id="project-count" class="result-count" role="status" aria-live="polite">6 projects</p><div class="grid"><article class="project featured" data-category="dotnet"><span>Enterprise SaaS</span><h3>HIS Control Center</h3><p>Multi-tenant control center for Hospital Information Systems with CQRS, ABAC, RowVersion concurrency, EF Core interceptors, OpenAPI/Scalar, and automated architecture tests.</p></article><article class="project" data-category="dotnet"><span>ASP.NET Core</span><h3>Mentora.API</h3><p>Backend platform using Clean Architecture, JWT authentication, EF Core, Repository Pattern, PostgreSQL, Docker, REST APIs, and dependency injection.</p></article><article class="project" data-category="data"><span>ETL · Oracle</span><h3>Rayan & Tadbir History Fetcher</h3><p>Financial market synchronization platform using Oracle 19c, batch processing, connection pooling, and database performance tuning.</p></article><article class="project" data-category="architecture"><span>Governance</span><h3>Enterprise Codebase Audit</h3><p>Large-scale architectural analysis across 15+ enterprise projects, supported by automated validation and refactoring tools.</p></article><article class="project" data-category="java"><span>Spring Boot</span><h3>Task Management Platform</h3><p>Full-stack task app with Spring Boot, PostgreSQL, JWT authentication, layered architecture, REST APIs, and role-based authorization.</p></article><article class="project" data-category="data"><span>PL/SQL</span><h3>Oracle Diagnostic Suite</h3><p>Reusable utilities for production diagnostics, health checks, connectivity validation, and troubleshooting.</p></article></div></section><section id="github" class="section" aria-labelledby="github-heading"><div class="feature-section-head"><div><p class="eyebrow">Open source</p><h2 id="github-heading">GitHub Activity</h2><p class="feature-intro">Public repositories and recent activity from <a href="https://github.com/kian-al" target="_blank" rel="noopener noreferrer">@kian-al</a>.</p></div><a class="button" href="https://github.com/kian-al?tab=repositories" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a></div><div class="github-summary"><article class="feature-card"><strong id="gh-repos">32</strong><span>Public repositories</span><small>Including forks</small></article><article class="feature-card"><strong id="gh-stars">0</strong><span>Repository stars</span><small>Excluding forked repositories</small></article><article class="feature-card"><strong id="gh-followers">10</strong><span>GitHub followers</span><small>Public profile</small></article></div><div class="github-data-note"><span id="gh-status" class="data-status" data-state="snapshot" role="status" aria-live="polite">Saved public data</span><p id="gh-note">Saved Oct 11, 2026. Live updates load when available.</p><button id="gh-refresh" type="button" class="feature-button" hidden>Refresh</button></div><div class="repo-section-head"><h3>Repository explorer</h3><p>Original public repositories; forks and this portfolio are excluded.</p></div><div id="repo-controls" class="repo-controls" hidden><div class="control-field"><label for="repo-search">Search repositories</label><input id="repo-search" type="search" placeholder="Search by name or description" autocomplete="off"></div><div class="control-field"><label for="repo-language">Language</label><select id="repo-language"><option value="">All languages</option></select></div></div><p id="repo-count" class="result-count" role="status" aria-live="polite">6 of 28 repositories</p><div id="repo-grid" class="repo-grid"><article class="repo-card"><div class="repo-top"><span class="repo-kind">Public repository</span></div><h3><a href="https://github.com/kian-al/CPU-Scheduling-Algorithms" target="_blank" rel="noopener noreferrer">CPU-Scheduling-Algorithms</a></h3><p class="repo-description">This repository contains implementations of common CPU Scheduling Algorithms using C#.</p><div class="repo-meta"><span class="repo-language">C#</span><span>0 stars</span></div><p class="repo-updated">Updated May 09, 2026</p></article><article class="repo-card"><div class="repo-top"><span class="repo-kind">Public repository</span></div><h3><a href="https://github.com/kian-al/Car-Price-Estimation-Full-Stack-Project" target="_blank" rel="noopener noreferrer">Car-Price-Estimation-Full-Stack-Project</a></h3><p class="repo-description">A full-stack car price estimation system using React, Tailwind, Python Django, and Machine Learning. Includes authentication, dashboard, ML-powered price prediction, and modern UI components.</p><div class="repo-meta"><span class="repo-language">TypeScript</span><span>0 stars</span></div><p class="repo-updated">Updated Feb 08, 2026</p></article><article class="repo-card"><div class="repo-top"><span class="repo-kind">Public repository</span></div><h3><a href="https://github.com/kian-al/Cron-Fund" target="_blank" rel="noopener noreferrer">Cron-Fund</a></h3><p class="repo-description">Automated NAV Fetching System for Investment Funds A modular .NET console application that automatically fetches and stores daily NAV (Net Asset Value) data from multiple providers such as Rayan an…</p><div class="repo-meta"><span class="repo-language">C#</span><span>0 stars</span></div><p class="repo-updated">Updated Feb 07, 2026</p></article><article class="repo-card"><div class="repo-top"><span class="repo-kind">Public repository</span></div><h3><a href="https://github.com/kian-al/Todo" target="_blank" rel="noopener noreferrer">Todo</a></h3><p class="repo-description">A full-stack TODO application built with Spring Boot and Angular. This project includes RESTful APIs for task management, database integration, and a modern Angular UI for creating, updating, and t…</p><div class="repo-meta"><span class="repo-language">Java</span><span>0 stars</span></div><p class="repo-updated">Updated Dec 08, 2025</p></article><article class="repo-card"><div class="repo-top"><span class="repo-kind">Public repository</span></div><h3><a href="https://github.com/kian-al/temperature-monitor" target="_blank" rel="noopener noreferrer">temperature-monitor</a></h3><p class="repo-description">A smart IoT temperature and humidity monitoring system using ESP32, DHT22 sensor, buzzer, LED alerts, and physical button with MicroPython. Includes real-time critical temperature alarm and Wokwi s…</p><div class="repo-meta"><span class="repo-language">Python</span><span>0 stars</span></div><p class="repo-updated">Updated Dec 02, 2025</p></article><article class="repo-card"><div class="repo-top"><span class="repo-kind">Public repository</span></div><h3><a href="https://github.com/kian-al/flash-card" target="_blank" rel="noopener noreferrer">flash-card</a></h3><p class="repo-description">A simple and interactive Flash Cards app built with HTML, CSS, and JavaScript. Create, manage, and review cards to improve your learning experience.</p><div class="repo-meta"><span class="repo-language">JavaScript</span><span>0 stars</span></div><p class="repo-updated">Updated Dec 02, 2025</p></article></div><div class="repo-footer"><button id="repo-more" class="feature-button" type="button" aria-expanded="false" aria-controls="repo-grid" hidden>Show all repositories</button><a href="https://github.com/kian-al?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories on GitHub <span aria-hidden="true">↗</span></a></div><div class="activity-panel"><div class="activity-heading"><h3>Recent public activity</h3><p>GitHub reports a limited recent window. Private contributions are not shown.</p></div><ol id="gh-events" class="event-list"><li class="gh-event"><div><span class="event-action">Pushed code</span><a class="event-repo" href="https://github.com/kian-al/kian-almasi.github.io" target="_blank" rel="noopener noreferrer">kian-al/kian-almasi.github.io</a></div><time datetime="2026-10-11T12:06:16Z">Oct 11, 2026</time></li><li class="gh-event"><div><span class="event-action">Pushed code</span><a class="event-repo" href="https://github.com/kian-al/kian-almasi.github.io" target="_blank" rel="noopener noreferrer">kian-al/kian-almasi.github.io</a></div><time datetime="2026-10-11T11:58:49Z">Oct 11, 2026</time></li><li class="gh-event"><div><span class="event-action">Pushed code</span><a class="event-repo" href="https://github.com/kian-al/kian-almasi.github.io" target="_blank" rel="noopener noreferrer">kian-al/kian-almasi.github.io</a></div><time datetime="2026-10-11T11:44:31Z">Oct 11, 2026</time></li><li class="gh-event"><div><span class="event-action">Starred a repository</span><a class="event-repo" href="https://github.com/devxhub/awesome-book-collection" target="_blank" rel="noopener noreferrer">devxhub/awesome-book-collection</a></div><time datetime="2026-09-19T08:26:23Z">Sep 19, 2026</time></li></ol></div><noscript><p class="feature-intro">JavaScript is disabled. This section shows a saved snapshot; visit GitHub for current information.</p></noscript></section><section id="skills" class="section split"><div><p class="eyebrow mono-eyebrow">Skills</p><h2>Architecture, security & data.</h2></div><div class="chips"><span>C#</span><span>.NET 8/10</span><span>ASP.NET Core</span><span>Java</span><span>Spring Boot</span><span>EF Core</span><span>MediatR</span><span>FluentValidation</span><span>Clean Architecture</span><span>CQRS</span><span>DDD</span><span>Oracle PL/SQL</span><span>PostgreSQL</span><span>SQL Server</span><span>RBAC/ABAC</span><span>TOTP</span><span>PBKDF2</span><span>xUnit</span><span>Moq</span><span>Docker</span><span>Python</span><span>PowerShell</span></div></section><section id="background" class="section" aria-labelledby="background-heading"><p class="eyebrow">Background</p><h2 id="background-heading">Education &amp; learning</h2><div class="background-grid"><article class="feature-card education-card"><span class="feature-index">Education</span><h3>B.Sc. Computer Engineering</h3><p>Software Engineering<br>Zanjan Vocational Technical University<br><span class="muted">National University of Skills</span></p><div class="degree-detail"><span>GPA</span><strong>18.47 / 20</strong></div></article><article class="feature-card learning-card"><span class="feature-index">Certifications &amp; coursework</span><h3>Continued learning</h3><ul class="learning-list"><li><strong>HackerRank</strong><span>Software Engineer · Java · SQL · Python</span></li><li><strong>IBM</strong><span>Python for Data Science &amp; AI</span></li><li><strong>Maktabkhooneh</strong><span>Introduction to Programming with Java</span></li></ul></article></div></section><section class="section quote"><p>“My focus is building maintainable enterprise systems through strict governance, automation, rigorous testing, and clean code practices.”</p></section><section id="contact" class="section contact"><div><p class="eyebrow mono-eyebrow">Contact</p><h2>Let’s build reliable backend systems.</h2><p class="muted">Open to backend engineering opportunities in enterprise SaaS, fintech, healthcare systems, and database-heavy products.</p></div><div class="contact-links"><a href="mailto:kianalmasi0@gmail.com">kianalmasi0@gmail.com</a><a href="https://github.com/kian-al">github.com/kian-al</a><a href="https://www.linkedin.com/in/kian-almasi">linkedin.com/in/kian-almasi</a></div></section></main><footer>© 2026 Kian Almasi · Designed as a fast, responsive GitHub Pages resume.</footer><script>
+┗━━━━━━━┛</pre><dl><div><dt>USER</dt><dd>kian-al</dd></div><div><dt>ROLE</dt><dd>Backend Engineer</dd></div><div><dt>RUNTIME</dt><dd>.NET 8/10 · JVM</dd></div><div><dt>ARCH</dt><dd>Clean · CQRS · DDD</dd></div><div><dt>DB</dt><dd>Oracle · PG · MSSQL</dd></div><div><dt>SECURITY</dt><dd>ABAC · TOTP · PBKDF2</dd></div><div><dt>GPA</dt><dd>18.47 / 20</dd></div></dl></aside><div class="term-main" id="term-body"><div id="term-output"></div><div class="term-input-line"><span class="prompt">kian@backend:~$</span><input id="term-input" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal command input" placeholder="try 'help' — or 'sudo hire-me'" /></div></div></div><div class="term-status"><span>⬢ .NET 10</span><span>⬢ Oracle 19c</span><span>⬢ xUnit: passing</span><span class="grow"></span><span>tip: ↑ for history · 'clear' to reset</span></div></div></section><section id="experience" class="section split"><div><p class="eyebrow mono-eyebrow">Experience</p><h2>Sanay System</h2><p class="muted">Backend Software Engineer (.NET) · Financial Systems & Hospital Information Systems</p></div><div class="timeline"><article><h3>Multi-tenant HIS Control Center</h3><p>Designed a strict Clean Architecture and CQRS backend with tenant isolation, health monitoring, API governance, and domain-focused concurrency handling.</p></article><article><h3>Security & auditing</h3><p>Built IAM capabilities including ABAC, TOTP, session revocation, PBKDF2 hashing, correlation tracking, and a Two-Flush Audit Pattern for reliable relational logs.</p></article><article><h3>Performance & data engineering</h3><p>Optimized Oracle PL/SQL queries, execution plans, EF Core read pipelines, DTO projections, pagination, filtering, and high-volume ETL workloads.</p></article></div></section><section id="projects" class="section"><p class="eyebrow mono-eyebrow">Selected projects</p><h2>Selected projects</h2><div class="project-filters" role="group" aria-label="Filter selected projects" hidden><button type="button" data-filter="all" aria-pressed="true">All projects</button><button type="button" data-filter="dotnet" aria-pressed="false">.NET</button><button type="button" data-filter="data" aria-pressed="false">Data</button><button type="button" data-filter="java" aria-pressed="false">Java</button><button type="button" data-filter="architecture" aria-pressed="false">Architecture</button></div><p id="project-count" class="result-count" role="status" aria-live="polite">6 projects</p><div class="grid"><article class="project featured" data-category="dotnet"><span>Enterprise SaaS</span><h3>HIS Control Center</h3><p>Multi-tenant control center for Hospital Information Systems with CQRS, ABAC, RowVersion concurrency, EF Core interceptors, OpenAPI/Scalar, and automated architecture tests.</p></article><article class="project" data-category="dotnet"><span>ASP.NET Core</span><h3>Mentora.API</h3><p>Backend platform using Clean Architecture, JWT authentication, EF Core, Repository Pattern, PostgreSQL, Docker, REST APIs, and dependency injection.</p></article><article class="project" data-category="data"><span>ETL · Oracle</span><h3>Rayan & Tadbir History Fetcher</h3><p>Financial market synchronization platform using Oracle 19c, batch processing, connection pooling, and database performance tuning.</p></article><article class="project" data-category="architecture"><span>Governance</span><h3>Enterprise Codebase Audit</h3><p>Large-scale architectural analysis across 15+ enterprise projects, supported by automated validation and refactoring tools.</p></article><article class="project" data-category="java"><span>Spring Boot</span><h3>Task Management Platform</h3><p>Full-stack task app with Spring Boot, PostgreSQL, JWT authentication, layered architecture, REST APIs, and role-based authorization.</p></article><article class="project" data-category="data"><span>PL/SQL</span><h3>Oracle Diagnostic Suite</h3><p>Reusable utilities for production diagnostics, health checks, connectivity validation, and troubleshooting.</p></article></div></section><section id="github" class="section" aria-labelledby="github-heading"><div class="feature-section-head"><div><p class="eyebrow">Open source</p><h2 id="github-heading">GitHub Activity</h2><p class="feature-intro">Selected repositories and contribution history from <a href="https://github.com/kian-al" target="_blank" rel="noopener noreferrer">@kian-al</a>.</p></div><a class="button" href="https://github.com/kian-al?tab=repositories" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a></div><div class="github-summary"><article class="feature-card"><strong id="gh-repos">32</strong><span>Public repositories</span><small>Including forks</small></article><article class="feature-card"><strong id="gh-stars">0</strong><span>Repository stars</span><small>Excluding forked repositories</small></article><article class="feature-card"><strong id="gh-followers">10</strong><span>GitHub followers</span><small>Public profile</small></article></div><div class="github-data-note"><span id="gh-status" class="data-status" data-state="snapshot" role="status" aria-live="polite">Saved public data</span><p id="gh-note">Saved Oct 11, 2026. Live updates load when available.</p><button id="gh-refresh" type="button" class="feature-button" hidden>Refresh</button></div><div class="curated-heading"><h3>Featured repositories</h3><p>A few projects spanning backend engineering, full-stack development and algorithms.</p></div><div class="curated-grid"><article class="repo-card curated-card"><span class="repo-kind">Financial data</span><h3><a href="https://github.com/kian-al/Cron-Fund" target="_blank" rel="noopener noreferrer">Cron-Fund</a></h3><p class="repo-description">A modular .NET 8 pipeline for fetching investment-fund NAV data from Rayan and Tadbir, with layered services and Entity Framework Core.</p><div class="repo-meta"><span class="repo-language">.NET 8 · EF Core</span></div><a class="curated-source" href="https://github.com/kian-al/Cron-Fund" target="_blank" rel="noopener noreferrer" aria-label="View Cron-Fund source code">View source <span aria-hidden="true">↗</span></a></article><article class="repo-card curated-card"><span class="repo-kind">Full-stack ML</span><h3><a href="https://github.com/kian-al/Car-Price-Estimation-Full-Stack-Project" target="_blank" rel="noopener noreferrer">Car Price Estimation</a></h3><p class="repo-description">A Django and React application connecting machine-learning price prediction to a REST API and a web interface.</p><div class="repo-meta"><span class="repo-language">Django · React · ML</span></div><a class="curated-source" href="https://github.com/kian-al/Car-Price-Estimation-Full-Stack-Project" target="_blank" rel="noopener noreferrer" aria-label="View Car Price Estimation source code">View source <span aria-hidden="true">↗</span></a></article><article class="repo-card curated-card"><span class="repo-kind">C# algorithms</span><h3><a href="https://github.com/kian-al/CPU-Scheduling-Algorithms" target="_blank" rel="noopener noreferrer">CPU Scheduling Algorithms</a></h3><p class="repo-description">C# implementations of FCFS, SJF and Round Robin scheduling, with algorithms organized as separate projects.</p><div class="repo-meta"><span class="repo-language">C# · .NET</span></div><a class="curated-source" href="https://github.com/kian-al/CPU-Scheduling-Algorithms" target="_blank" rel="noopener noreferrer" aria-label="View CPU Scheduling Algorithms source code">View source <span aria-hidden="true">↗</span></a></article></div><div class="curated-footer"><a href="https://github.com/kian-al?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories on GitHub <span aria-hidden="true">↗</span></a></div><section id="contribution-calendar" class="contribution-panel" aria-labelledby="calendar-title" data-day-count="365" data-total="105"><div class="calendar-heading"><h3 id="calendar-title"><span id="calendar-total">105</span> contributions in the last year</h3><span id="calendar-status" class="calendar-status" role="status" aria-live="polite">Saved calendar</span></div><p id="calendar-period" class="calendar-period">Oct 12, 2025 – Oct 11, 2026</p><p id="calendar-summary" class="sr-only">The calendar shows 105 contributions over 365 consecutive days, with exact daily counts available through keyboard focus and the accompanying table.</p><div class="calendar-scroll" id="calendar-scroll"><table aria-label="105 GitHub contributions from 2025-10-12 to 2026-10-11" aria-readonly="true" class="contribution-grid" id="calendar-grid" role="grid" style="--weeks:53">
+<caption class="sr-only">Daily GitHub contributions. Use arrow keys to inspect days; Home and End move to the first and last day.</caption>
+<thead>
+<tr>
+<td>
+<span class="sr-only">Day of Week</span>
+</td>
+<td class="calendar-month" colspan="3">
+<span class="sr-only">October</span>
+<span aria-hidden="true">Oct</span>
+</td>
+<td class="calendar-month" colspan="5">
+<span class="sr-only">November</span>
+<span aria-hidden="true">Nov</span>
+</td>
+<td class="calendar-month" colspan="4">
+<span class="sr-only">December</span>
+<span aria-hidden="true">Dec</span>
+</td>
+<td class="calendar-month" colspan="4">
+<span class="sr-only">January</span>
+<span aria-hidden="true">Jan</span>
+</td>
+<td class="calendar-month" colspan="4">
+<span class="sr-only">February</span>
+<span aria-hidden="true">Feb</span>
+</td>
+<td class="calendar-month" colspan="5">
+<span class="sr-only">March</span>
+<span aria-hidden="true">Mar</span>
+</td>
+<td class="calendar-month" colspan="4">
+<span class="sr-only">April</span>
+<span aria-hidden="true">Apr</span>
+</td>
+<td class="calendar-month" colspan="5">
+<span class="sr-only">May</span>
+<span aria-hidden="true">May</span>
+</td>
+<td class="calendar-month" colspan="4">
+<span class="sr-only">June</span>
+<span aria-hidden="true">Jun</span>
+</td>
+<td class="calendar-month" colspan="4">
+<span class="sr-only">July</span>
+<span aria-hidden="true">Jul</span>
+</td>
+<td class="calendar-month" colspan="5">
+<span class="sr-only">August</span>
+<span aria-hidden="true">Aug</span>
+</td>
+<td class="calendar-month" colspan="4">
+<span class="sr-only">September</span>
+<span aria-hidden="true">Sep</span>
+</td>
+<td class="calendar-month" colspan="2">
+<span class="sr-only">October</span>
+<span aria-hidden="true">Oct</span>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="calendar-weekday">
+<span class="sr-only">Sunday</span>
+<span aria-hidden="true">
+              Sun
+            </span>
+</td>
+<td aria-label="0 contributions on October 12, 2025" class="contribution-day" data-count="0" data-date="2025-10-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 12th.</tool-tip>
+<td aria-label="0 contributions on October 19, 2025" class="contribution-day" data-count="0" data-date="2025-10-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 19th.</tool-tip>
+<td aria-label="0 contributions on October 26, 2025" class="contribution-day" data-count="0" data-date="2025-10-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 26th.</tool-tip>
+<td aria-label="0 contributions on November 02, 2025" class="contribution-day" data-count="0" data-date="2025-11-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 2nd.</tool-tip>
+<td aria-label="0 contributions on November 09, 2025" class="contribution-day" data-count="0" data-date="2025-11-09" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 9th.</tool-tip>
+<td aria-label="2 contributions on November 16, 2025" class="contribution-day" data-count="2" data-date="2025-11-16" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">2 contributions on November 16th.</tool-tip>
+<td aria-label="0 contributions on November 23, 2025" class="contribution-day" data-count="0" data-date="2025-11-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 23rd.</tool-tip>
+<td aria-label="5 contributions on November 30, 2025" class="contribution-day" data-count="5" data-date="2025-11-30" data-level="3" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">5 contributions on November 30th.</tool-tip>
+<td aria-label="1 contribution on December 07, 2025" class="contribution-day" data-count="1" data-date="2025-12-07" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">1 contribution on December 7th.</tool-tip>
+<td aria-label="0 contributions on December 14, 2025" class="contribution-day" data-count="0" data-date="2025-12-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 14th.</tool-tip>
+<td aria-label="0 contributions on December 21, 2025" class="contribution-day" data-count="0" data-date="2025-12-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 21st.</tool-tip>
+<td aria-label="0 contributions on December 28, 2025" class="contribution-day" data-count="0" data-date="2025-12-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 28th.</tool-tip>
+<td aria-label="0 contributions on January 04, 2026" class="contribution-day" data-count="0" data-date="2026-01-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 4th.</tool-tip>
+<td aria-label="0 contributions on January 11, 2026" class="contribution-day" data-count="0" data-date="2026-01-11" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 11th.</tool-tip>
+<td aria-label="0 contributions on January 18, 2026" class="contribution-day" data-count="0" data-date="2026-01-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 18th.</tool-tip>
+<td aria-label="0 contributions on January 25, 2026" class="contribution-day" data-count="0" data-date="2026-01-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 25th.</tool-tip>
+<td aria-label="0 contributions on February 01, 2026" class="contribution-day" data-count="0" data-date="2026-02-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 1st.</tool-tip>
+<td aria-label="1 contribution on February 08, 2026" class="contribution-day" data-count="1" data-date="2026-02-08" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">1 contribution on February 8th.</tool-tip>
+<td aria-label="0 contributions on February 15, 2026" class="contribution-day" data-count="0" data-date="2026-02-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 15th.</tool-tip>
+<td aria-label="0 contributions on February 22, 2026" class="contribution-day" data-count="0" data-date="2026-02-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 22nd.</tool-tip>
+<td aria-label="0 contributions on March 01, 2026" class="contribution-day" data-count="0" data-date="2026-03-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 1st.</tool-tip>
+<td aria-label="0 contributions on March 08, 2026" class="contribution-day" data-count="0" data-date="2026-03-08" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 8th.</tool-tip>
+<td aria-label="0 contributions on March 15, 2026" class="contribution-day" data-count="0" data-date="2026-03-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 15th.</tool-tip>
+<td aria-label="0 contributions on March 22, 2026" class="contribution-day" data-count="0" data-date="2026-03-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 22nd.</tool-tip>
+<td aria-label="0 contributions on March 29, 2026" class="contribution-day" data-count="0" data-date="2026-03-29" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 29th.</tool-tip>
+<td aria-label="0 contributions on April 05, 2026" class="contribution-day" data-count="0" data-date="2026-04-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 5th.</tool-tip>
+<td aria-label="0 contributions on April 12, 2026" class="contribution-day" data-count="0" data-date="2026-04-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 12th.</tool-tip>
+<td aria-label="0 contributions on April 19, 2026" class="contribution-day" data-count="0" data-date="2026-04-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 19th.</tool-tip>
+<td aria-label="0 contributions on April 26, 2026" class="contribution-day" data-count="0" data-date="2026-04-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 26th.</tool-tip>
+<td aria-label="0 contributions on May 03, 2026" class="contribution-day" data-count="0" data-date="2026-05-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 3rd.</tool-tip>
+<td aria-label="0 contributions on May 10, 2026" class="contribution-day" data-count="0" data-date="2026-05-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 10th.</tool-tip>
+<td aria-label="0 contributions on May 17, 2026" class="contribution-day" data-count="0" data-date="2026-05-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 17th.</tool-tip>
+<td aria-label="0 contributions on May 24, 2026" class="contribution-day" data-count="0" data-date="2026-05-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 24th.</tool-tip>
+<td aria-label="0 contributions on May 31, 2026" class="contribution-day" data-count="0" data-date="2026-05-31" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 31st.</tool-tip>
+<td aria-label="0 contributions on June 07, 2026" class="contribution-day" data-count="0" data-date="2026-06-07" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 7th.</tool-tip>
+<td aria-label="0 contributions on June 14, 2026" class="contribution-day" data-count="0" data-date="2026-06-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 14th.</tool-tip>
+<td aria-label="0 contributions on June 21, 2026" class="contribution-day" data-count="0" data-date="2026-06-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 21st.</tool-tip>
+<td aria-label="0 contributions on June 28, 2026" class="contribution-day" data-count="0" data-date="2026-06-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 28th.</tool-tip>
+<td aria-label="0 contributions on July 05, 2026" class="contribution-day" data-count="0" data-date="2026-07-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 5th.</tool-tip>
+<td aria-label="0 contributions on July 12, 2026" class="contribution-day" data-count="0" data-date="2026-07-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 12th.</tool-tip>
+<td aria-label="0 contributions on July 19, 2026" class="contribution-day" data-count="0" data-date="2026-07-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 19th.</tool-tip>
+<td aria-label="0 contributions on July 26, 2026" class="contribution-day" data-count="0" data-date="2026-07-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 26th.</tool-tip>
+<td aria-label="0 contributions on August 02, 2026" class="contribution-day" data-count="0" data-date="2026-08-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 2nd.</tool-tip>
+<td aria-label="0 contributions on August 09, 2026" class="contribution-day" data-count="0" data-date="2026-08-09" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 9th.</tool-tip>
+<td aria-label="0 contributions on August 16, 2026" class="contribution-day" data-count="0" data-date="2026-08-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 16th.</tool-tip>
+<td aria-label="0 contributions on August 23, 2026" class="contribution-day" data-count="0" data-date="2026-08-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 23rd.</tool-tip>
+<td aria-label="0 contributions on August 30, 2026" class="contribution-day" data-count="0" data-date="2026-08-30" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 30th.</tool-tip>
+<td aria-label="9 contributions on September 06, 2026" class="contribution-day" data-count="9" data-date="2026-09-06" data-level="4" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">9 contributions on September 6th.</tool-tip>
+<td aria-label="1 contribution on September 13, 2026" class="contribution-day" data-count="1" data-date="2026-09-13" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">1 contribution on September 13th.</tool-tip>
+<td aria-label="0 contributions on September 20, 2026" class="contribution-day" data-count="0" data-date="2026-09-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 20th.</tool-tip>
+<td aria-label="0 contributions on September 27, 2026" class="contribution-day" data-count="0" data-date="2026-09-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 27th.</tool-tip>
+<td aria-label="0 contributions on October 04, 2026" class="contribution-day" data-count="0" data-date="2026-10-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 4th.</tool-tip>
+<td aria-label="7 contributions on October 11, 2026" class="contribution-day" data-count="7" data-date="2026-10-11" data-level="4" role="gridcell" tabindex="0"></td>
+<tool-tip class="sr-only">7 contributions on October 11th.</tool-tip>
+</tr>
+<tr>
+<td class="calendar-weekday">
+<span class="sr-only">Monday</span>
+<span aria-hidden="true">
+              Mon
+            </span>
+</td>
+<td aria-label="0 contributions on October 13, 2025" class="contribution-day" data-count="0" data-date="2025-10-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 13th.</tool-tip>
+<td aria-label="0 contributions on October 20, 2025" class="contribution-day" data-count="0" data-date="2025-10-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 20th.</tool-tip>
+<td aria-label="0 contributions on October 27, 2025" class="contribution-day" data-count="0" data-date="2025-10-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 27th.</tool-tip>
+<td aria-label="0 contributions on November 03, 2025" class="contribution-day" data-count="0" data-date="2025-11-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 3rd.</tool-tip>
+<td aria-label="0 contributions on November 10, 2025" class="contribution-day" data-count="0" data-date="2025-11-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 10th.</tool-tip>
+<td aria-label="0 contributions on November 17, 2025" class="contribution-day" data-count="0" data-date="2025-11-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 17th.</tool-tip>
+<td aria-label="4 contributions on November 24, 2025" class="contribution-day" data-count="4" data-date="2025-11-24" data-level="2" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">4 contributions on November 24th.</tool-tip>
+<td aria-label="4 contributions on December 01, 2025" class="contribution-day" data-count="4" data-date="2025-12-01" data-level="2" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">4 contributions on December 1st.</tool-tip>
+<td aria-label="1 contribution on December 08, 2025" class="contribution-day" data-count="1" data-date="2025-12-08" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">1 contribution on December 8th.</tool-tip>
+<td aria-label="0 contributions on December 15, 2025" class="contribution-day" data-count="0" data-date="2025-12-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 15th.</tool-tip>
+<td aria-label="0 contributions on December 22, 2025" class="contribution-day" data-count="0" data-date="2025-12-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 22nd.</tool-tip>
+<td aria-label="0 contributions on December 29, 2025" class="contribution-day" data-count="0" data-date="2025-12-29" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 29th.</tool-tip>
+<td aria-label="0 contributions on January 05, 2026" class="contribution-day" data-count="0" data-date="2026-01-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 5th.</tool-tip>
+<td aria-label="0 contributions on January 12, 2026" class="contribution-day" data-count="0" data-date="2026-01-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 12th.</tool-tip>
+<td aria-label="0 contributions on January 19, 2026" class="contribution-day" data-count="0" data-date="2026-01-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 19th.</tool-tip>
+<td aria-label="0 contributions on January 26, 2026" class="contribution-day" data-count="0" data-date="2026-01-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 26th.</tool-tip>
+<td aria-label="0 contributions on February 02, 2026" class="contribution-day" data-count="0" data-date="2026-02-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 2nd.</tool-tip>
+<td aria-label="1 contribution on February 09, 2026" class="contribution-day" data-count="1" data-date="2026-02-09" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">1 contribution on February 9th.</tool-tip>
+<td aria-label="0 contributions on February 16, 2026" class="contribution-day" data-count="0" data-date="2026-02-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 16th.</tool-tip>
+<td aria-label="0 contributions on February 23, 2026" class="contribution-day" data-count="0" data-date="2026-02-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 23rd.</tool-tip>
+<td aria-label="0 contributions on March 02, 2026" class="contribution-day" data-count="0" data-date="2026-03-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 2nd.</tool-tip>
+<td aria-label="0 contributions on March 09, 2026" class="contribution-day" data-count="0" data-date="2026-03-09" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 9th.</tool-tip>
+<td aria-label="0 contributions on March 16, 2026" class="contribution-day" data-count="0" data-date="2026-03-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 16th.</tool-tip>
+<td aria-label="0 contributions on March 23, 2026" class="contribution-day" data-count="0" data-date="2026-03-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 23rd.</tool-tip>
+<td aria-label="0 contributions on March 30, 2026" class="contribution-day" data-count="0" data-date="2026-03-30" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 30th.</tool-tip>
+<td aria-label="0 contributions on April 06, 2026" class="contribution-day" data-count="0" data-date="2026-04-06" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 6th.</tool-tip>
+<td aria-label="0 contributions on April 13, 2026" class="contribution-day" data-count="0" data-date="2026-04-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 13th.</tool-tip>
+<td aria-label="0 contributions on April 20, 2026" class="contribution-day" data-count="0" data-date="2026-04-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 20th.</tool-tip>
+<td aria-label="0 contributions on April 27, 2026" class="contribution-day" data-count="0" data-date="2026-04-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 27th.</tool-tip>
+<td aria-label="0 contributions on May 04, 2026" class="contribution-day" data-count="0" data-date="2026-05-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 4th.</tool-tip>
+<td aria-label="0 contributions on May 11, 2026" class="contribution-day" data-count="0" data-date="2026-05-11" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 11th.</tool-tip>
+<td aria-label="0 contributions on May 18, 2026" class="contribution-day" data-count="0" data-date="2026-05-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 18th.</tool-tip>
+<td aria-label="0 contributions on May 25, 2026" class="contribution-day" data-count="0" data-date="2026-05-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 25th.</tool-tip>
+<td aria-label="0 contributions on June 01, 2026" class="contribution-day" data-count="0" data-date="2026-06-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 1st.</tool-tip>
+<td aria-label="0 contributions on June 08, 2026" class="contribution-day" data-count="0" data-date="2026-06-08" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 8th.</tool-tip>
+<td aria-label="0 contributions on June 15, 2026" class="contribution-day" data-count="0" data-date="2026-06-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 15th.</tool-tip>
+<td aria-label="0 contributions on June 22, 2026" class="contribution-day" data-count="0" data-date="2026-06-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 22nd.</tool-tip>
+<td aria-label="0 contributions on June 29, 2026" class="contribution-day" data-count="0" data-date="2026-06-29" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 29th.</tool-tip>
+<td aria-label="0 contributions on July 06, 2026" class="contribution-day" data-count="0" data-date="2026-07-06" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 6th.</tool-tip>
+<td aria-label="0 contributions on July 13, 2026" class="contribution-day" data-count="0" data-date="2026-07-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 13th.</tool-tip>
+<td aria-label="0 contributions on July 20, 2026" class="contribution-day" data-count="0" data-date="2026-07-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 20th.</tool-tip>
+<td aria-label="0 contributions on July 27, 2026" class="contribution-day" data-count="0" data-date="2026-07-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 27th.</tool-tip>
+<td aria-label="0 contributions on August 03, 2026" class="contribution-day" data-count="0" data-date="2026-08-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 3rd.</tool-tip>
+<td aria-label="0 contributions on August 10, 2026" class="contribution-day" data-count="0" data-date="2026-08-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 10th.</tool-tip>
+<td aria-label="0 contributions on August 17, 2026" class="contribution-day" data-count="0" data-date="2026-08-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 17th.</tool-tip>
+<td aria-label="0 contributions on August 24, 2026" class="contribution-day" data-count="0" data-date="2026-08-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 24th.</tool-tip>
+<td aria-label="0 contributions on August 31, 2026" class="contribution-day" data-count="0" data-date="2026-08-31" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 31st.</tool-tip>
+<td aria-label="0 contributions on September 07, 2026" class="contribution-day" data-count="0" data-date="2026-09-07" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 7th.</tool-tip>
+<td aria-label="0 contributions on September 14, 2026" class="contribution-day" data-count="0" data-date="2026-09-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 14th.</tool-tip>
+<td aria-label="0 contributions on September 21, 2026" class="contribution-day" data-count="0" data-date="2026-09-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 21st.</tool-tip>
+<td aria-label="0 contributions on September 28, 2026" class="contribution-day" data-count="0" data-date="2026-09-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 28th.</tool-tip>
+<td aria-label="0 contributions on October 05, 2026" class="contribution-day" data-count="0" data-date="2026-10-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 5th.</tool-tip>
+<td aria-hidden="true" class="calendar-blank"></td>
+</tr>
+<tr>
+<td class="calendar-weekday">
+<span class="sr-only">Tuesday</span>
+<span aria-hidden="true">
+              Tue
+            </span>
+</td>
+<td aria-label="0 contributions on October 14, 2025" class="contribution-day" data-count="0" data-date="2025-10-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 14th.</tool-tip>
+<td aria-label="0 contributions on October 21, 2025" class="contribution-day" data-count="0" data-date="2025-10-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 21st.</tool-tip>
+<td aria-label="0 contributions on October 28, 2025" class="contribution-day" data-count="0" data-date="2025-10-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 28th.</tool-tip>
+<td aria-label="0 contributions on November 04, 2025" class="contribution-day" data-count="0" data-date="2025-11-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 4th.</tool-tip>
+<td aria-label="0 contributions on November 11, 2025" class="contribution-day" data-count="0" data-date="2025-11-11" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 11th.</tool-tip>
+<td aria-label="0 contributions on November 18, 2025" class="contribution-day" data-count="0" data-date="2025-11-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 18th.</tool-tip>
+<td aria-label="0 contributions on November 25, 2025" class="contribution-day" data-count="0" data-date="2025-11-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 25th.</tool-tip>
+<td aria-label="7 contributions on December 02, 2025" class="contribution-day" data-count="7" data-date="2025-12-02" data-level="4" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">7 contributions on December 2nd.</tool-tip>
+<td aria-label="0 contributions on December 09, 2025" class="contribution-day" data-count="0" data-date="2025-12-09" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 9th.</tool-tip>
+<td aria-label="0 contributions on December 16, 2025" class="contribution-day" data-count="0" data-date="2025-12-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 16th.</tool-tip>
+<td aria-label="0 contributions on December 23, 2025" class="contribution-day" data-count="0" data-date="2025-12-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 23rd.</tool-tip>
+<td aria-label="0 contributions on December 30, 2025" class="contribution-day" data-count="0" data-date="2025-12-30" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 30th.</tool-tip>
+<td aria-label="0 contributions on January 06, 2026" class="contribution-day" data-count="0" data-date="2026-01-06" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 6th.</tool-tip>
+<td aria-label="0 contributions on January 13, 2026" class="contribution-day" data-count="0" data-date="2026-01-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 13th.</tool-tip>
+<td aria-label="0 contributions on January 20, 2026" class="contribution-day" data-count="0" data-date="2026-01-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 20th.</tool-tip>
+<td aria-label="0 contributions on January 27, 2026" class="contribution-day" data-count="0" data-date="2026-01-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 27th.</tool-tip>
+<td aria-label="0 contributions on February 03, 2026" class="contribution-day" data-count="0" data-date="2026-02-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 3rd.</tool-tip>
+<td aria-label="0 contributions on February 10, 2026" class="contribution-day" data-count="0" data-date="2026-02-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 10th.</tool-tip>
+<td aria-label="0 contributions on February 17, 2026" class="contribution-day" data-count="0" data-date="2026-02-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 17th.</tool-tip>
+<td aria-label="0 contributions on February 24, 2026" class="contribution-day" data-count="0" data-date="2026-02-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 24th.</tool-tip>
+<td aria-label="0 contributions on March 03, 2026" class="contribution-day" data-count="0" data-date="2026-03-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 3rd.</tool-tip>
+<td aria-label="0 contributions on March 10, 2026" class="contribution-day" data-count="0" data-date="2026-03-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 10th.</tool-tip>
+<td aria-label="0 contributions on March 17, 2026" class="contribution-day" data-count="0" data-date="2026-03-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 17th.</tool-tip>
+<td aria-label="0 contributions on March 24, 2026" class="contribution-day" data-count="0" data-date="2026-03-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 24th.</tool-tip>
+<td aria-label="0 contributions on March 31, 2026" class="contribution-day" data-count="0" data-date="2026-03-31" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 31st.</tool-tip>
+<td aria-label="0 contributions on April 07, 2026" class="contribution-day" data-count="0" data-date="2026-04-07" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 7th.</tool-tip>
+<td aria-label="0 contributions on April 14, 2026" class="contribution-day" data-count="0" data-date="2026-04-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 14th.</tool-tip>
+<td aria-label="0 contributions on April 21, 2026" class="contribution-day" data-count="0" data-date="2026-04-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 21st.</tool-tip>
+<td aria-label="0 contributions on April 28, 2026" class="contribution-day" data-count="0" data-date="2026-04-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 28th.</tool-tip>
+<td aria-label="0 contributions on May 05, 2026" class="contribution-day" data-count="0" data-date="2026-05-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 5th.</tool-tip>
+<td aria-label="0 contributions on May 12, 2026" class="contribution-day" data-count="0" data-date="2026-05-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 12th.</tool-tip>
+<td aria-label="0 contributions on May 19, 2026" class="contribution-day" data-count="0" data-date="2026-05-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 19th.</tool-tip>
+<td aria-label="0 contributions on May 26, 2026" class="contribution-day" data-count="0" data-date="2026-05-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 26th.</tool-tip>
+<td aria-label="0 contributions on June 02, 2026" class="contribution-day" data-count="0" data-date="2026-06-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 2nd.</tool-tip>
+<td aria-label="0 contributions on June 09, 2026" class="contribution-day" data-count="0" data-date="2026-06-09" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 9th.</tool-tip>
+<td aria-label="0 contributions on June 16, 2026" class="contribution-day" data-count="0" data-date="2026-06-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 16th.</tool-tip>
+<td aria-label="0 contributions on June 23, 2026" class="contribution-day" data-count="0" data-date="2026-06-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 23rd.</tool-tip>
+<td aria-label="0 contributions on June 30, 2026" class="contribution-day" data-count="0" data-date="2026-06-30" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 30th.</tool-tip>
+<td aria-label="0 contributions on July 07, 2026" class="contribution-day" data-count="0" data-date="2026-07-07" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 7th.</tool-tip>
+<td aria-label="0 contributions on July 14, 2026" class="contribution-day" data-count="0" data-date="2026-07-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 14th.</tool-tip>
+<td aria-label="0 contributions on July 21, 2026" class="contribution-day" data-count="0" data-date="2026-07-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 21st.</tool-tip>
+<td aria-label="0 contributions on July 28, 2026" class="contribution-day" data-count="0" data-date="2026-07-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 28th.</tool-tip>
+<td aria-label="0 contributions on August 04, 2026" class="contribution-day" data-count="0" data-date="2026-08-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 4th.</tool-tip>
+<td aria-label="0 contributions on August 11, 2026" class="contribution-day" data-count="0" data-date="2026-08-11" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 11th.</tool-tip>
+<td aria-label="0 contributions on August 18, 2026" class="contribution-day" data-count="0" data-date="2026-08-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 18th.</tool-tip>
+<td aria-label="0 contributions on August 25, 2026" class="contribution-day" data-count="0" data-date="2026-08-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 25th.</tool-tip>
+<td aria-label="0 contributions on September 01, 2026" class="contribution-day" data-count="0" data-date="2026-09-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 1st.</tool-tip>
+<td aria-label="0 contributions on September 08, 2026" class="contribution-day" data-count="0" data-date="2026-09-08" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 8th.</tool-tip>
+<td aria-label="0 contributions on September 15, 2026" class="contribution-day" data-count="0" data-date="2026-09-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 15th.</tool-tip>
+<td aria-label="0 contributions on September 22, 2026" class="contribution-day" data-count="0" data-date="2026-09-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 22nd.</tool-tip>
+<td aria-label="0 contributions on September 29, 2026" class="contribution-day" data-count="0" data-date="2026-09-29" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 29th.</tool-tip>
+<td aria-label="0 contributions on October 06, 2026" class="contribution-day" data-count="0" data-date="2026-10-06" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 6th.</tool-tip>
+<td aria-hidden="true" class="calendar-blank"></td>
+</tr>
+<tr>
+<td class="calendar-weekday">
+<span class="sr-only">Wednesday</span>
+<span aria-hidden="true">
+              Wed
+            </span>
+</td>
+<td aria-label="0 contributions on October 15, 2025" class="contribution-day" data-count="0" data-date="2025-10-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 15th.</tool-tip>
+<td aria-label="0 contributions on October 22, 2025" class="contribution-day" data-count="0" data-date="2025-10-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 22nd.</tool-tip>
+<td aria-label="0 contributions on October 29, 2025" class="contribution-day" data-count="0" data-date="2025-10-29" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 29th.</tool-tip>
+<td aria-label="0 contributions on November 05, 2025" class="contribution-day" data-count="0" data-date="2025-11-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 5th.</tool-tip>
+<td aria-label="0 contributions on November 12, 2025" class="contribution-day" data-count="0" data-date="2025-11-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 12th.</tool-tip>
+<td aria-label="3 contributions on November 19, 2025" class="contribution-day" data-count="3" data-date="2025-11-19" data-level="2" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">3 contributions on November 19th.</tool-tip>
+<td aria-label="2 contributions on November 26, 2025" class="contribution-day" data-count="2" data-date="2025-11-26" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">2 contributions on November 26th.</tool-tip>
+<td aria-label="0 contributions on December 03, 2025" class="contribution-day" data-count="0" data-date="2025-12-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 3rd.</tool-tip>
+<td aria-label="0 contributions on December 10, 2025" class="contribution-day" data-count="0" data-date="2025-12-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 10th.</tool-tip>
+<td aria-label="0 contributions on December 17, 2025" class="contribution-day" data-count="0" data-date="2025-12-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 17th.</tool-tip>
+<td aria-label="0 contributions on December 24, 2025" class="contribution-day" data-count="0" data-date="2025-12-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 24th.</tool-tip>
+<td aria-label="0 contributions on December 31, 2025" class="contribution-day" data-count="0" data-date="2025-12-31" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 31st.</tool-tip>
+<td aria-label="0 contributions on January 07, 2026" class="contribution-day" data-count="0" data-date="2026-01-07" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 7th.</tool-tip>
+<td aria-label="0 contributions on January 14, 2026" class="contribution-day" data-count="0" data-date="2026-01-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 14th.</tool-tip>
+<td aria-label="0 contributions on January 21, 2026" class="contribution-day" data-count="0" data-date="2026-01-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 21st.</tool-tip>
+<td aria-label="0 contributions on January 28, 2026" class="contribution-day" data-count="0" data-date="2026-01-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 28th.</tool-tip>
+<td aria-label="0 contributions on February 04, 2026" class="contribution-day" data-count="0" data-date="2026-02-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 4th.</tool-tip>
+<td aria-label="0 contributions on February 11, 2026" class="contribution-day" data-count="0" data-date="2026-02-11" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 11th.</tool-tip>
+<td aria-label="0 contributions on February 18, 2026" class="contribution-day" data-count="0" data-date="2026-02-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 18th.</tool-tip>
+<td aria-label="0 contributions on February 25, 2026" class="contribution-day" data-count="0" data-date="2026-02-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 25th.</tool-tip>
+<td aria-label="0 contributions on March 04, 2026" class="contribution-day" data-count="0" data-date="2026-03-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 4th.</tool-tip>
+<td aria-label="0 contributions on March 11, 2026" class="contribution-day" data-count="0" data-date="2026-03-11" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 11th.</tool-tip>
+<td aria-label="0 contributions on March 18, 2026" class="contribution-day" data-count="0" data-date="2026-03-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 18th.</tool-tip>
+<td aria-label="0 contributions on March 25, 2026" class="contribution-day" data-count="0" data-date="2026-03-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 25th.</tool-tip>
+<td aria-label="0 contributions on April 01, 2026" class="contribution-day" data-count="0" data-date="2026-04-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 1st.</tool-tip>
+<td aria-label="0 contributions on April 08, 2026" class="contribution-day" data-count="0" data-date="2026-04-08" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 8th.</tool-tip>
+<td aria-label="0 contributions on April 15, 2026" class="contribution-day" data-count="0" data-date="2026-04-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 15th.</tool-tip>
+<td aria-label="0 contributions on April 22, 2026" class="contribution-day" data-count="0" data-date="2026-04-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 22nd.</tool-tip>
+<td aria-label="0 contributions on April 29, 2026" class="contribution-day" data-count="0" data-date="2026-04-29" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 29th.</tool-tip>
+<td aria-label="0 contributions on May 06, 2026" class="contribution-day" data-count="0" data-date="2026-05-06" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 6th.</tool-tip>
+<td aria-label="0 contributions on May 13, 2026" class="contribution-day" data-count="0" data-date="2026-05-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 13th.</tool-tip>
+<td aria-label="0 contributions on May 20, 2026" class="contribution-day" data-count="0" data-date="2026-05-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 20th.</tool-tip>
+<td aria-label="0 contributions on May 27, 2026" class="contribution-day" data-count="0" data-date="2026-05-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 27th.</tool-tip>
+<td aria-label="0 contributions on June 03, 2026" class="contribution-day" data-count="0" data-date="2026-06-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 3rd.</tool-tip>
+<td aria-label="0 contributions on June 10, 2026" class="contribution-day" data-count="0" data-date="2026-06-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 10th.</tool-tip>
+<td aria-label="0 contributions on June 17, 2026" class="contribution-day" data-count="0" data-date="2026-06-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 17th.</tool-tip>
+<td aria-label="0 contributions on June 24, 2026" class="contribution-day" data-count="0" data-date="2026-06-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 24th.</tool-tip>
+<td aria-label="0 contributions on July 01, 2026" class="contribution-day" data-count="0" data-date="2026-07-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 1st.</tool-tip>
+<td aria-label="0 contributions on July 08, 2026" class="contribution-day" data-count="0" data-date="2026-07-08" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 8th.</tool-tip>
+<td aria-label="0 contributions on July 15, 2026" class="contribution-day" data-count="0" data-date="2026-07-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 15th.</tool-tip>
+<td aria-label="0 contributions on July 22, 2026" class="contribution-day" data-count="0" data-date="2026-07-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 22nd.</tool-tip>
+<td aria-label="0 contributions on July 29, 2026" class="contribution-day" data-count="0" data-date="2026-07-29" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 29th.</tool-tip>
+<td aria-label="0 contributions on August 05, 2026" class="contribution-day" data-count="0" data-date="2026-08-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 5th.</tool-tip>
+<td aria-label="0 contributions on August 12, 2026" class="contribution-day" data-count="0" data-date="2026-08-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 12th.</tool-tip>
+<td aria-label="0 contributions on August 19, 2026" class="contribution-day" data-count="0" data-date="2026-08-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 19th.</tool-tip>
+<td aria-label="0 contributions on August 26, 2026" class="contribution-day" data-count="0" data-date="2026-08-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 26th.</tool-tip>
+<td aria-label="0 contributions on September 02, 2026" class="contribution-day" data-count="0" data-date="2026-09-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 2nd.</tool-tip>
+<td aria-label="0 contributions on September 09, 2026" class="contribution-day" data-count="0" data-date="2026-09-09" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 9th.</tool-tip>
+<td aria-label="0 contributions on September 16, 2026" class="contribution-day" data-count="0" data-date="2026-09-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 16th.</tool-tip>
+<td aria-label="0 contributions on September 23, 2026" class="contribution-day" data-count="0" data-date="2026-09-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 23rd.</tool-tip>
+<td aria-label="0 contributions on September 30, 2026" class="contribution-day" data-count="0" data-date="2026-09-30" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 30th.</tool-tip>
+<td aria-label="0 contributions on October 07, 2026" class="contribution-day" data-count="0" data-date="2026-10-07" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 7th.</tool-tip>
+<td aria-hidden="true" class="calendar-blank"></td>
+</tr>
+<tr>
+<td class="calendar-weekday">
+<span class="sr-only">Thursday</span>
+<span aria-hidden="true">
+              Thu
+            </span>
+</td>
+<td aria-label="0 contributions on October 16, 2025" class="contribution-day" data-count="0" data-date="2025-10-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 16th.</tool-tip>
+<td aria-label="0 contributions on October 23, 2025" class="contribution-day" data-count="0" data-date="2025-10-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 23rd.</tool-tip>
+<td aria-label="0 contributions on October 30, 2025" class="contribution-day" data-count="0" data-date="2025-10-30" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 30th.</tool-tip>
+<td aria-label="1 contribution on November 06, 2025" class="contribution-day" data-count="1" data-date="2025-11-06" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">1 contribution on November 6th.</tool-tip>
+<td aria-label="0 contributions on November 13, 2025" class="contribution-day" data-count="0" data-date="2025-11-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 13th.</tool-tip>
+<td aria-label="0 contributions on November 20, 2025" class="contribution-day" data-count="0" data-date="2025-11-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 20th.</tool-tip>
+<td aria-label="1 contribution on November 27, 2025" class="contribution-day" data-count="1" data-date="2025-11-27" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">1 contribution on November 27th.</tool-tip>
+<td aria-label="8 contributions on December 04, 2025" class="contribution-day" data-count="8" data-date="2025-12-04" data-level="4" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">8 contributions on December 4th.</tool-tip>
+<td aria-label="0 contributions on December 11, 2025" class="contribution-day" data-count="0" data-date="2025-12-11" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 11th.</tool-tip>
+<td aria-label="0 contributions on December 18, 2025" class="contribution-day" data-count="0" data-date="2025-12-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 18th.</tool-tip>
+<td aria-label="0 contributions on December 25, 2025" class="contribution-day" data-count="0" data-date="2025-12-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 25th.</tool-tip>
+<td aria-label="0 contributions on January 01, 2026" class="contribution-day" data-count="0" data-date="2026-01-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 1st.</tool-tip>
+<td aria-label="0 contributions on January 08, 2026" class="contribution-day" data-count="0" data-date="2026-01-08" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 8th.</tool-tip>
+<td aria-label="0 contributions on January 15, 2026" class="contribution-day" data-count="0" data-date="2026-01-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 15th.</tool-tip>
+<td aria-label="0 contributions on January 22, 2026" class="contribution-day" data-count="0" data-date="2026-01-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 22nd.</tool-tip>
+<td aria-label="0 contributions on January 29, 2026" class="contribution-day" data-count="0" data-date="2026-01-29" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 29th.</tool-tip>
+<td aria-label="0 contributions on February 05, 2026" class="contribution-day" data-count="0" data-date="2026-02-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 5th.</tool-tip>
+<td aria-label="0 contributions on February 12, 2026" class="contribution-day" data-count="0" data-date="2026-02-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 12th.</tool-tip>
+<td aria-label="0 contributions on February 19, 2026" class="contribution-day" data-count="0" data-date="2026-02-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 19th.</tool-tip>
+<td aria-label="0 contributions on February 26, 2026" class="contribution-day" data-count="0" data-date="2026-02-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 26th.</tool-tip>
+<td aria-label="0 contributions on March 05, 2026" class="contribution-day" data-count="0" data-date="2026-03-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 5th.</tool-tip>
+<td aria-label="0 contributions on March 12, 2026" class="contribution-day" data-count="0" data-date="2026-03-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 12th.</tool-tip>
+<td aria-label="0 contributions on March 19, 2026" class="contribution-day" data-count="0" data-date="2026-03-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 19th.</tool-tip>
+<td aria-label="0 contributions on March 26, 2026" class="contribution-day" data-count="0" data-date="2026-03-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 26th.</tool-tip>
+<td aria-label="0 contributions on April 02, 2026" class="contribution-day" data-count="0" data-date="2026-04-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 2nd.</tool-tip>
+<td aria-label="0 contributions on April 09, 2026" class="contribution-day" data-count="0" data-date="2026-04-09" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 9th.</tool-tip>
+<td aria-label="0 contributions on April 16, 2026" class="contribution-day" data-count="0" data-date="2026-04-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 16th.</tool-tip>
+<td aria-label="0 contributions on April 23, 2026" class="contribution-day" data-count="0" data-date="2026-04-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 23rd.</tool-tip>
+<td aria-label="0 contributions on April 30, 2026" class="contribution-day" data-count="0" data-date="2026-04-30" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 30th.</tool-tip>
+<td aria-label="0 contributions on May 07, 2026" class="contribution-day" data-count="0" data-date="2026-05-07" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 7th.</tool-tip>
+<td aria-label="0 contributions on May 14, 2026" class="contribution-day" data-count="0" data-date="2026-05-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 14th.</tool-tip>
+<td aria-label="0 contributions on May 21, 2026" class="contribution-day" data-count="0" data-date="2026-05-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 21st.</tool-tip>
+<td aria-label="0 contributions on May 28, 2026" class="contribution-day" data-count="0" data-date="2026-05-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 28th.</tool-tip>
+<td aria-label="0 contributions on June 04, 2026" class="contribution-day" data-count="0" data-date="2026-06-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 4th.</tool-tip>
+<td aria-label="0 contributions on June 11, 2026" class="contribution-day" data-count="0" data-date="2026-06-11" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 11th.</tool-tip>
+<td aria-label="0 contributions on June 18, 2026" class="contribution-day" data-count="0" data-date="2026-06-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 18th.</tool-tip>
+<td aria-label="0 contributions on June 25, 2026" class="contribution-day" data-count="0" data-date="2026-06-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 25th.</tool-tip>
+<td aria-label="0 contributions on July 02, 2026" class="contribution-day" data-count="0" data-date="2026-07-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 2nd.</tool-tip>
+<td aria-label="0 contributions on July 09, 2026" class="contribution-day" data-count="0" data-date="2026-07-09" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 9th.</tool-tip>
+<td aria-label="0 contributions on July 16, 2026" class="contribution-day" data-count="0" data-date="2026-07-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 16th.</tool-tip>
+<td aria-label="0 contributions on July 23, 2026" class="contribution-day" data-count="0" data-date="2026-07-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 23rd.</tool-tip>
+<td aria-label="0 contributions on July 30, 2026" class="contribution-day" data-count="0" data-date="2026-07-30" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 30th.</tool-tip>
+<td aria-label="0 contributions on August 06, 2026" class="contribution-day" data-count="0" data-date="2026-08-06" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 6th.</tool-tip>
+<td aria-label="0 contributions on August 13, 2026" class="contribution-day" data-count="0" data-date="2026-08-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 13th.</tool-tip>
+<td aria-label="0 contributions on August 20, 2026" class="contribution-day" data-count="0" data-date="2026-08-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 20th.</tool-tip>
+<td aria-label="0 contributions on August 27, 2026" class="contribution-day" data-count="0" data-date="2026-08-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 27th.</tool-tip>
+<td aria-label="0 contributions on September 03, 2026" class="contribution-day" data-count="0" data-date="2026-09-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 3rd.</tool-tip>
+<td aria-label="0 contributions on September 10, 2026" class="contribution-day" data-count="0" data-date="2026-09-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 10th.</tool-tip>
+<td aria-label="0 contributions on September 17, 2026" class="contribution-day" data-count="0" data-date="2026-09-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 17th.</tool-tip>
+<td aria-label="0 contributions on September 24, 2026" class="contribution-day" data-count="0" data-date="2026-09-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 24th.</tool-tip>
+<td aria-label="0 contributions on October 01, 2026" class="contribution-day" data-count="0" data-date="2026-10-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 1st.</tool-tip>
+<td aria-label="0 contributions on October 08, 2026" class="contribution-day" data-count="0" data-date="2026-10-08" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 8th.</tool-tip>
+<td aria-hidden="true" class="calendar-blank"></td>
+</tr>
+<tr>
+<td class="calendar-weekday">
+<span class="sr-only">Friday</span>
+<span aria-hidden="true">
+              Fri
+            </span>
+</td>
+<td aria-label="0 contributions on October 17, 2025" class="contribution-day" data-count="0" data-date="2025-10-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 17th.</tool-tip>
+<td aria-label="0 contributions on October 24, 2025" class="contribution-day" data-count="0" data-date="2025-10-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 24th.</tool-tip>
+<td aria-label="0 contributions on October 31, 2025" class="contribution-day" data-count="0" data-date="2025-10-31" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 31st.</tool-tip>
+<td aria-label="10 contributions on November 07, 2025" class="contribution-day" data-count="10" data-date="2025-11-07" data-level="4" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">10 contributions on November 7th.</tool-tip>
+<td aria-label="0 contributions on November 14, 2025" class="contribution-day" data-count="0" data-date="2025-11-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 14th.</tool-tip>
+<td aria-label="0 contributions on November 21, 2025" class="contribution-day" data-count="0" data-date="2025-11-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 21st.</tool-tip>
+<td aria-label="7 contributions on November 28, 2025" class="contribution-day" data-count="7" data-date="2025-11-28" data-level="4" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">7 contributions on November 28th.</tool-tip>
+<td aria-label="1 contribution on December 05, 2025" class="contribution-day" data-count="1" data-date="2025-12-05" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">1 contribution on December 5th.</tool-tip>
+<td aria-label="0 contributions on December 12, 2025" class="contribution-day" data-count="0" data-date="2025-12-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 12th.</tool-tip>
+<td aria-label="0 contributions on December 19, 2025" class="contribution-day" data-count="0" data-date="2025-12-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 19th.</tool-tip>
+<td aria-label="0 contributions on December 26, 2025" class="contribution-day" data-count="0" data-date="2025-12-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 26th.</tool-tip>
+<td aria-label="0 contributions on January 02, 2026" class="contribution-day" data-count="0" data-date="2026-01-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 2nd.</tool-tip>
+<td aria-label="0 contributions on January 09, 2026" class="contribution-day" data-count="0" data-date="2026-01-09" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 9th.</tool-tip>
+<td aria-label="0 contributions on January 16, 2026" class="contribution-day" data-count="0" data-date="2026-01-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 16th.</tool-tip>
+<td aria-label="0 contributions on January 23, 2026" class="contribution-day" data-count="0" data-date="2026-01-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 23rd.</tool-tip>
+<td aria-label="0 contributions on January 30, 2026" class="contribution-day" data-count="0" data-date="2026-01-30" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 30th.</tool-tip>
+<td aria-label="3 contributions on February 06, 2026" class="contribution-day" data-count="3" data-date="2026-02-06" data-level="2" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">3 contributions on February 6th.</tool-tip>
+<td aria-label="0 contributions on February 13, 2026" class="contribution-day" data-count="0" data-date="2026-02-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 13th.</tool-tip>
+<td aria-label="0 contributions on February 20, 2026" class="contribution-day" data-count="0" data-date="2026-02-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 20th.</tool-tip>
+<td aria-label="0 contributions on February 27, 2026" class="contribution-day" data-count="0" data-date="2026-02-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 27th.</tool-tip>
+<td aria-label="0 contributions on March 06, 2026" class="contribution-day" data-count="0" data-date="2026-03-06" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 6th.</tool-tip>
+<td aria-label="0 contributions on March 13, 2026" class="contribution-day" data-count="0" data-date="2026-03-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 13th.</tool-tip>
+<td aria-label="0 contributions on March 20, 2026" class="contribution-day" data-count="0" data-date="2026-03-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 20th.</tool-tip>
+<td aria-label="0 contributions on March 27, 2026" class="contribution-day" data-count="0" data-date="2026-03-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 27th.</tool-tip>
+<td aria-label="0 contributions on April 03, 2026" class="contribution-day" data-count="0" data-date="2026-04-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 3rd.</tool-tip>
+<td aria-label="0 contributions on April 10, 2026" class="contribution-day" data-count="0" data-date="2026-04-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 10th.</tool-tip>
+<td aria-label="0 contributions on April 17, 2026" class="contribution-day" data-count="0" data-date="2026-04-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 17th.</tool-tip>
+<td aria-label="0 contributions on April 24, 2026" class="contribution-day" data-count="0" data-date="2026-04-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 24th.</tool-tip>
+<td aria-label="0 contributions on May 01, 2026" class="contribution-day" data-count="0" data-date="2026-05-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 1st.</tool-tip>
+<td aria-label="0 contributions on May 08, 2026" class="contribution-day" data-count="0" data-date="2026-05-08" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 8th.</tool-tip>
+<td aria-label="0 contributions on May 15, 2026" class="contribution-day" data-count="0" data-date="2026-05-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 15th.</tool-tip>
+<td aria-label="0 contributions on May 22, 2026" class="contribution-day" data-count="0" data-date="2026-05-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 22nd.</tool-tip>
+<td aria-label="0 contributions on May 29, 2026" class="contribution-day" data-count="0" data-date="2026-05-29" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 29th.</tool-tip>
+<td aria-label="0 contributions on June 05, 2026" class="contribution-day" data-count="0" data-date="2026-06-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 5th.</tool-tip>
+<td aria-label="0 contributions on June 12, 2026" class="contribution-day" data-count="0" data-date="2026-06-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 12th.</tool-tip>
+<td aria-label="0 contributions on June 19, 2026" class="contribution-day" data-count="0" data-date="2026-06-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 19th.</tool-tip>
+<td aria-label="0 contributions on June 26, 2026" class="contribution-day" data-count="0" data-date="2026-06-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 26th.</tool-tip>
+<td aria-label="0 contributions on July 03, 2026" class="contribution-day" data-count="0" data-date="2026-07-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 3rd.</tool-tip>
+<td aria-label="0 contributions on July 10, 2026" class="contribution-day" data-count="0" data-date="2026-07-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 10th.</tool-tip>
+<td aria-label="0 contributions on July 17, 2026" class="contribution-day" data-count="0" data-date="2026-07-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 17th.</tool-tip>
+<td aria-label="0 contributions on July 24, 2026" class="contribution-day" data-count="0" data-date="2026-07-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 24th.</tool-tip>
+<td aria-label="0 contributions on July 31, 2026" class="contribution-day" data-count="0" data-date="2026-07-31" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 31st.</tool-tip>
+<td aria-label="0 contributions on August 07, 2026" class="contribution-day" data-count="0" data-date="2026-08-07" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 7th.</tool-tip>
+<td aria-label="0 contributions on August 14, 2026" class="contribution-day" data-count="0" data-date="2026-08-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 14th.</tool-tip>
+<td aria-label="0 contributions on August 21, 2026" class="contribution-day" data-count="0" data-date="2026-08-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 21st.</tool-tip>
+<td aria-label="0 contributions on August 28, 2026" class="contribution-day" data-count="0" data-date="2026-08-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 28th.</tool-tip>
+<td aria-label="0 contributions on September 04, 2026" class="contribution-day" data-count="0" data-date="2026-09-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 4th.</tool-tip>
+<td aria-label="0 contributions on September 11, 2026" class="contribution-day" data-count="0" data-date="2026-09-11" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 11th.</tool-tip>
+<td aria-label="0 contributions on September 18, 2026" class="contribution-day" data-count="0" data-date="2026-09-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 18th.</tool-tip>
+<td aria-label="0 contributions on September 25, 2026" class="contribution-day" data-count="0" data-date="2026-09-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 25th.</tool-tip>
+<td aria-label="0 contributions on October 02, 2026" class="contribution-day" data-count="0" data-date="2026-10-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 2nd.</tool-tip>
+<td aria-label="0 contributions on October 09, 2026" class="contribution-day" data-count="0" data-date="2026-10-09" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 9th.</tool-tip>
+<td aria-hidden="true" class="calendar-blank"></td>
+</tr>
+<tr>
+<td class="calendar-weekday">
+<span class="sr-only">Saturday</span>
+<span aria-hidden="true">
+              Sat
+            </span>
+</td>
+<td aria-label="0 contributions on October 18, 2025" class="contribution-day" data-count="0" data-date="2025-10-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 18th.</tool-tip>
+<td aria-label="0 contributions on October 25, 2025" class="contribution-day" data-count="0" data-date="2025-10-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 25th.</tool-tip>
+<td aria-label="0 contributions on November 01, 2025" class="contribution-day" data-count="0" data-date="2025-11-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 1st.</tool-tip>
+<td aria-label="2 contributions on November 08, 2025" class="contribution-day" data-count="2" data-date="2025-11-08" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">2 contributions on November 8th.</tool-tip>
+<td aria-label="0 contributions on November 15, 2025" class="contribution-day" data-count="0" data-date="2025-11-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on November 15th.</tool-tip>
+<td aria-label="4 contributions on November 22, 2025" class="contribution-day" data-count="4" data-date="2025-11-22" data-level="2" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">4 contributions on November 22nd.</tool-tip>
+<td aria-label="6 contributions on November 29, 2025" class="contribution-day" data-count="6" data-date="2025-11-29" data-level="3" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">6 contributions on November 29th.</tool-tip>
+<td aria-label="0 contributions on December 06, 2025" class="contribution-day" data-count="0" data-date="2025-12-06" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 6th.</tool-tip>
+<td aria-label="0 contributions on December 13, 2025" class="contribution-day" data-count="0" data-date="2025-12-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 13th.</tool-tip>
+<td aria-label="0 contributions on December 20, 2025" class="contribution-day" data-count="0" data-date="2025-12-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 20th.</tool-tip>
+<td aria-label="0 contributions on December 27, 2025" class="contribution-day" data-count="0" data-date="2025-12-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on December 27th.</tool-tip>
+<td aria-label="0 contributions on January 03, 2026" class="contribution-day" data-count="0" data-date="2026-01-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 3rd.</tool-tip>
+<td aria-label="0 contributions on January 10, 2026" class="contribution-day" data-count="0" data-date="2026-01-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 10th.</tool-tip>
+<td aria-label="0 contributions on January 17, 2026" class="contribution-day" data-count="0" data-date="2026-01-17" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 17th.</tool-tip>
+<td aria-label="0 contributions on January 24, 2026" class="contribution-day" data-count="0" data-date="2026-01-24" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 24th.</tool-tip>
+<td aria-label="0 contributions on January 31, 2026" class="contribution-day" data-count="0" data-date="2026-01-31" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on January 31st.</tool-tip>
+<td aria-label="9 contributions on February 07, 2026" class="contribution-day" data-count="9" data-date="2026-02-07" data-level="4" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">9 contributions on February 7th.</tool-tip>
+<td aria-label="0 contributions on February 14, 2026" class="contribution-day" data-count="0" data-date="2026-02-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 14th.</tool-tip>
+<td aria-label="0 contributions on February 21, 2026" class="contribution-day" data-count="0" data-date="2026-02-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 21st.</tool-tip>
+<td aria-label="0 contributions on February 28, 2026" class="contribution-day" data-count="0" data-date="2026-02-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on February 28th.</tool-tip>
+<td aria-label="0 contributions on March 07, 2026" class="contribution-day" data-count="0" data-date="2026-03-07" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 7th.</tool-tip>
+<td aria-label="0 contributions on March 14, 2026" class="contribution-day" data-count="0" data-date="2026-03-14" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 14th.</tool-tip>
+<td aria-label="0 contributions on March 21, 2026" class="contribution-day" data-count="0" data-date="2026-03-21" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 21st.</tool-tip>
+<td aria-label="0 contributions on March 28, 2026" class="contribution-day" data-count="0" data-date="2026-03-28" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on March 28th.</tool-tip>
+<td aria-label="0 contributions on April 04, 2026" class="contribution-day" data-count="0" data-date="2026-04-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 4th.</tool-tip>
+<td aria-label="1 contribution on April 11, 2026" class="contribution-day" data-count="1" data-date="2026-04-11" data-level="1" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">1 contribution on April 11th.</tool-tip>
+<td aria-label="0 contributions on April 18, 2026" class="contribution-day" data-count="0" data-date="2026-04-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 18th.</tool-tip>
+<td aria-label="0 contributions on April 25, 2026" class="contribution-day" data-count="0" data-date="2026-04-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on April 25th.</tool-tip>
+<td aria-label="0 contributions on May 02, 2026" class="contribution-day" data-count="0" data-date="2026-05-02" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 2nd.</tool-tip>
+<td aria-label="4 contributions on May 09, 2026" class="contribution-day" data-count="4" data-date="2026-05-09" data-level="2" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">4 contributions on May 9th.</tool-tip>
+<td aria-label="0 contributions on May 16, 2026" class="contribution-day" data-count="0" data-date="2026-05-16" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 16th.</tool-tip>
+<td aria-label="0 contributions on May 23, 2026" class="contribution-day" data-count="0" data-date="2026-05-23" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 23rd.</tool-tip>
+<td aria-label="0 contributions on May 30, 2026" class="contribution-day" data-count="0" data-date="2026-05-30" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on May 30th.</tool-tip>
+<td aria-label="0 contributions on June 06, 2026" class="contribution-day" data-count="0" data-date="2026-06-06" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 6th.</tool-tip>
+<td aria-label="0 contributions on June 13, 2026" class="contribution-day" data-count="0" data-date="2026-06-13" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 13th.</tool-tip>
+<td aria-label="0 contributions on June 20, 2026" class="contribution-day" data-count="0" data-date="2026-06-20" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 20th.</tool-tip>
+<td aria-label="0 contributions on June 27, 2026" class="contribution-day" data-count="0" data-date="2026-06-27" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on June 27th.</tool-tip>
+<td aria-label="0 contributions on July 04, 2026" class="contribution-day" data-count="0" data-date="2026-07-04" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 4th.</tool-tip>
+<td aria-label="0 contributions on July 11, 2026" class="contribution-day" data-count="0" data-date="2026-07-11" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 11th.</tool-tip>
+<td aria-label="0 contributions on July 18, 2026" class="contribution-day" data-count="0" data-date="2026-07-18" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 18th.</tool-tip>
+<td aria-label="0 contributions on July 25, 2026" class="contribution-day" data-count="0" data-date="2026-07-25" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on July 25th.</tool-tip>
+<td aria-label="0 contributions on August 01, 2026" class="contribution-day" data-count="0" data-date="2026-08-01" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 1st.</tool-tip>
+<td aria-label="0 contributions on August 08, 2026" class="contribution-day" data-count="0" data-date="2026-08-08" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 8th.</tool-tip>
+<td aria-label="0 contributions on August 15, 2026" class="contribution-day" data-count="0" data-date="2026-08-15" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 15th.</tool-tip>
+<td aria-label="0 contributions on August 22, 2026" class="contribution-day" data-count="0" data-date="2026-08-22" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 22nd.</tool-tip>
+<td aria-label="0 contributions on August 29, 2026" class="contribution-day" data-count="0" data-date="2026-08-29" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on August 29th.</tool-tip>
+<td aria-label="0 contributions on September 05, 2026" class="contribution-day" data-count="0" data-date="2026-09-05" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 5th.</tool-tip>
+<td aria-label="0 contributions on September 12, 2026" class="contribution-day" data-count="0" data-date="2026-09-12" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 12th.</tool-tip>
+<td aria-label="0 contributions on September 19, 2026" class="contribution-day" data-count="0" data-date="2026-09-19" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 19th.</tool-tip>
+<td aria-label="0 contributions on September 26, 2026" class="contribution-day" data-count="0" data-date="2026-09-26" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on September 26th.</tool-tip>
+<td aria-label="0 contributions on October 03, 2026" class="contribution-day" data-count="0" data-date="2026-10-03" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 3rd.</tool-tip>
+<td aria-label="0 contributions on October 10, 2026" class="contribution-day" data-count="0" data-date="2026-10-10" data-level="0" role="gridcell" tabindex="-1"></td>
+<tool-tip class="sr-only">No contributions on October 10th.</tool-tip>
+<td aria-hidden="true" class="calendar-blank"></td>
+</tr>
+</tbody>
+</table></div><div class="calendar-footer"><p id="calendar-readout" class="calendar-readout" role="status" aria-live="polite">Hover, tap or use arrow keys to inspect a day.</p><div class="calendar-legend" aria-label="Contribution intensity from fewer to more"><span>Less</span><span class="legend-day" data-level="0" aria-hidden="true"></span><span class="legend-day" data-level="1" aria-hidden="true"></span><span class="legend-day" data-level="2" aria-hidden="true"></span><span class="legend-day" data-level="3" aria-hidden="true"></span><span class="legend-day" data-level="4" aria-hidden="true"></span><span>More</span></div></div><div class="calendar-source"><p id="calendar-note">Counts from your public GitHub profile. Saved Oct 11, 2026.</p><a href="https://github.com/kian-al?tab=overview" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a></div><p class="calendar-mobile-hint">Swipe horizontally to see all months.</p><div class="sr-only calendar-values-wrapper"><table aria-label="Daily GitHub contribution counts"><thead><tr><th scope="col">Date</th><th scope="col">Contributions</th></tr></thead><tbody id="calendar-values"><tr><th scope="row">2025-10-12</th><td>0</td></tr><tr><th scope="row">2025-10-13</th><td>0</td></tr><tr><th scope="row">2025-10-14</th><td>0</td></tr><tr><th scope="row">2025-10-15</th><td>0</td></tr><tr><th scope="row">2025-10-16</th><td>0</td></tr><tr><th scope="row">2025-10-17</th><td>0</td></tr><tr><th scope="row">2025-10-18</th><td>0</td></tr><tr><th scope="row">2025-10-19</th><td>0</td></tr><tr><th scope="row">2025-10-20</th><td>0</td></tr><tr><th scope="row">2025-10-21</th><td>0</td></tr><tr><th scope="row">2025-10-22</th><td>0</td></tr><tr><th scope="row">2025-10-23</th><td>0</td></tr><tr><th scope="row">2025-10-24</th><td>0</td></tr><tr><th scope="row">2025-10-25</th><td>0</td></tr><tr><th scope="row">2025-10-26</th><td>0</td></tr><tr><th scope="row">2025-10-27</th><td>0</td></tr><tr><th scope="row">2025-10-28</th><td>0</td></tr><tr><th scope="row">2025-10-29</th><td>0</td></tr><tr><th scope="row">2025-10-30</th><td>0</td></tr><tr><th scope="row">2025-10-31</th><td>0</td></tr><tr><th scope="row">2025-11-01</th><td>0</td></tr><tr><th scope="row">2025-11-02</th><td>0</td></tr><tr><th scope="row">2025-11-03</th><td>0</td></tr><tr><th scope="row">2025-11-04</th><td>0</td></tr><tr><th scope="row">2025-11-05</th><td>0</td></tr><tr><th scope="row">2025-11-06</th><td>1</td></tr><tr><th scope="row">2025-11-07</th><td>10</td></tr><tr><th scope="row">2025-11-08</th><td>2</td></tr><tr><th scope="row">2025-11-09</th><td>0</td></tr><tr><th scope="row">2025-11-10</th><td>0</td></tr><tr><th scope="row">2025-11-11</th><td>0</td></tr><tr><th scope="row">2025-11-12</th><td>0</td></tr><tr><th scope="row">2025-11-13</th><td>0</td></tr><tr><th scope="row">2025-11-14</th><td>0</td></tr><tr><th scope="row">2025-11-15</th><td>0</td></tr><tr><th scope="row">2025-11-16</th><td>2</td></tr><tr><th scope="row">2025-11-17</th><td>0</td></tr><tr><th scope="row">2025-11-18</th><td>0</td></tr><tr><th scope="row">2025-11-19</th><td>3</td></tr><tr><th scope="row">2025-11-20</th><td>0</td></tr><tr><th scope="row">2025-11-21</th><td>0</td></tr><tr><th scope="row">2025-11-22</th><td>4</td></tr><tr><th scope="row">2025-11-23</th><td>0</td></tr><tr><th scope="row">2025-11-24</th><td>4</td></tr><tr><th scope="row">2025-11-25</th><td>0</td></tr><tr><th scope="row">2025-11-26</th><td>2</td></tr><tr><th scope="row">2025-11-27</th><td>1</td></tr><tr><th scope="row">2025-11-28</th><td>7</td></tr><tr><th scope="row">2025-11-29</th><td>6</td></tr><tr><th scope="row">2025-11-30</th><td>5</td></tr><tr><th scope="row">2025-12-01</th><td>4</td></tr><tr><th scope="row">2025-12-02</th><td>7</td></tr><tr><th scope="row">2025-12-03</th><td>0</td></tr><tr><th scope="row">2025-12-04</th><td>8</td></tr><tr><th scope="row">2025-12-05</th><td>1</td></tr><tr><th scope="row">2025-12-06</th><td>0</td></tr><tr><th scope="row">2025-12-07</th><td>1</td></tr><tr><th scope="row">2025-12-08</th><td>1</td></tr><tr><th scope="row">2025-12-09</th><td>0</td></tr><tr><th scope="row">2025-12-10</th><td>0</td></tr><tr><th scope="row">2025-12-11</th><td>0</td></tr><tr><th scope="row">2025-12-12</th><td>0</td></tr><tr><th scope="row">2025-12-13</th><td>0</td></tr><tr><th scope="row">2025-12-14</th><td>0</td></tr><tr><th scope="row">2025-12-15</th><td>0</td></tr><tr><th scope="row">2025-12-16</th><td>0</td></tr><tr><th scope="row">2025-12-17</th><td>0</td></tr><tr><th scope="row">2025-12-18</th><td>0</td></tr><tr><th scope="row">2025-12-19</th><td>0</td></tr><tr><th scope="row">2025-12-20</th><td>0</td></tr><tr><th scope="row">2025-12-21</th><td>0</td></tr><tr><th scope="row">2025-12-22</th><td>0</td></tr><tr><th scope="row">2025-12-23</th><td>0</td></tr><tr><th scope="row">2025-12-24</th><td>0</td></tr><tr><th scope="row">2025-12-25</th><td>0</td></tr><tr><th scope="row">2025-12-26</th><td>0</td></tr><tr><th scope="row">2025-12-27</th><td>0</td></tr><tr><th scope="row">2025-12-28</th><td>0</td></tr><tr><th scope="row">2025-12-29</th><td>0</td></tr><tr><th scope="row">2025-12-30</th><td>0</td></tr><tr><th scope="row">2025-12-31</th><td>0</td></tr><tr><th scope="row">2026-01-01</th><td>0</td></tr><tr><th scope="row">2026-01-02</th><td>0</td></tr><tr><th scope="row">2026-01-03</th><td>0</td></tr><tr><th scope="row">2026-01-04</th><td>0</td></tr><tr><th scope="row">2026-01-05</th><td>0</td></tr><tr><th scope="row">2026-01-06</th><td>0</td></tr><tr><th scope="row">2026-01-07</th><td>0</td></tr><tr><th scope="row">2026-01-08</th><td>0</td></tr><tr><th scope="row">2026-01-09</th><td>0</td></tr><tr><th scope="row">2026-01-10</th><td>0</td></tr><tr><th scope="row">2026-01-11</th><td>0</td></tr><tr><th scope="row">2026-01-12</th><td>0</td></tr><tr><th scope="row">2026-01-13</th><td>0</td></tr><tr><th scope="row">2026-01-14</th><td>0</td></tr><tr><th scope="row">2026-01-15</th><td>0</td></tr><tr><th scope="row">2026-01-16</th><td>0</td></tr><tr><th scope="row">2026-01-17</th><td>0</td></tr><tr><th scope="row">2026-01-18</th><td>0</td></tr><tr><th scope="row">2026-01-19</th><td>0</td></tr><tr><th scope="row">2026-01-20</th><td>0</td></tr><tr><th scope="row">2026-01-21</th><td>0</td></tr><tr><th scope="row">2026-01-22</th><td>0</td></tr><tr><th scope="row">2026-01-23</th><td>0</td></tr><tr><th scope="row">2026-01-24</th><td>0</td></tr><tr><th scope="row">2026-01-25</th><td>0</td></tr><tr><th scope="row">2026-01-26</th><td>0</td></tr><tr><th scope="row">2026-01-27</th><td>0</td></tr><tr><th scope="row">2026-01-28</th><td>0</td></tr><tr><th scope="row">2026-01-29</th><td>0</td></tr><tr><th scope="row">2026-01-30</th><td>0</td></tr><tr><th scope="row">2026-01-31</th><td>0</td></tr><tr><th scope="row">2026-02-01</th><td>0</td></tr><tr><th scope="row">2026-02-02</th><td>0</td></tr><tr><th scope="row">2026-02-03</th><td>0</td></tr><tr><th scope="row">2026-02-04</th><td>0</td></tr><tr><th scope="row">2026-02-05</th><td>0</td></tr><tr><th scope="row">2026-02-06</th><td>3</td></tr><tr><th scope="row">2026-02-07</th><td>9</td></tr><tr><th scope="row">2026-02-08</th><td>1</td></tr><tr><th scope="row">2026-02-09</th><td>1</td></tr><tr><th scope="row">2026-02-10</th><td>0</td></tr><tr><th scope="row">2026-02-11</th><td>0</td></tr><tr><th scope="row">2026-02-12</th><td>0</td></tr><tr><th scope="row">2026-02-13</th><td>0</td></tr><tr><th scope="row">2026-02-14</th><td>0</td></tr><tr><th scope="row">2026-02-15</th><td>0</td></tr><tr><th scope="row">2026-02-16</th><td>0</td></tr><tr><th scope="row">2026-02-17</th><td>0</td></tr><tr><th scope="row">2026-02-18</th><td>0</td></tr><tr><th scope="row">2026-02-19</th><td>0</td></tr><tr><th scope="row">2026-02-20</th><td>0</td></tr><tr><th scope="row">2026-02-21</th><td>0</td></tr><tr><th scope="row">2026-02-22</th><td>0</td></tr><tr><th scope="row">2026-02-23</th><td>0</td></tr><tr><th scope="row">2026-02-24</th><td>0</td></tr><tr><th scope="row">2026-02-25</th><td>0</td></tr><tr><th scope="row">2026-02-26</th><td>0</td></tr><tr><th scope="row">2026-02-27</th><td>0</td></tr><tr><th scope="row">2026-02-28</th><td>0</td></tr><tr><th scope="row">2026-03-01</th><td>0</td></tr><tr><th scope="row">2026-03-02</th><td>0</td></tr><tr><th scope="row">2026-03-03</th><td>0</td></tr><tr><th scope="row">2026-03-04</th><td>0</td></tr><tr><th scope="row">2026-03-05</th><td>0</td></tr><tr><th scope="row">2026-03-06</th><td>0</td></tr><tr><th scope="row">2026-03-07</th><td>0</td></tr><tr><th scope="row">2026-03-08</th><td>0</td></tr><tr><th scope="row">2026-03-09</th><td>0</td></tr><tr><th scope="row">2026-03-10</th><td>0</td></tr><tr><th scope="row">2026-03-11</th><td>0</td></tr><tr><th scope="row">2026-03-12</th><td>0</td></tr><tr><th scope="row">2026-03-13</th><td>0</td></tr><tr><th scope="row">2026-03-14</th><td>0</td></tr><tr><th scope="row">2026-03-15</th><td>0</td></tr><tr><th scope="row">2026-03-16</th><td>0</td></tr><tr><th scope="row">2026-03-17</th><td>0</td></tr><tr><th scope="row">2026-03-18</th><td>0</td></tr><tr><th scope="row">2026-03-19</th><td>0</td></tr><tr><th scope="row">2026-03-20</th><td>0</td></tr><tr><th scope="row">2026-03-21</th><td>0</td></tr><tr><th scope="row">2026-03-22</th><td>0</td></tr><tr><th scope="row">2026-03-23</th><td>0</td></tr><tr><th scope="row">2026-03-24</th><td>0</td></tr><tr><th scope="row">2026-03-25</th><td>0</td></tr><tr><th scope="row">2026-03-26</th><td>0</td></tr><tr><th scope="row">2026-03-27</th><td>0</td></tr><tr><th scope="row">2026-03-28</th><td>0</td></tr><tr><th scope="row">2026-03-29</th><td>0</td></tr><tr><th scope="row">2026-03-30</th><td>0</td></tr><tr><th scope="row">2026-03-31</th><td>0</td></tr><tr><th scope="row">2026-04-01</th><td>0</td></tr><tr><th scope="row">2026-04-02</th><td>0</td></tr><tr><th scope="row">2026-04-03</th><td>0</td></tr><tr><th scope="row">2026-04-04</th><td>0</td></tr><tr><th scope="row">2026-04-05</th><td>0</td></tr><tr><th scope="row">2026-04-06</th><td>0</td></tr><tr><th scope="row">2026-04-07</th><td>0</td></tr><tr><th scope="row">2026-04-08</th><td>0</td></tr><tr><th scope="row">2026-04-09</th><td>0</td></tr><tr><th scope="row">2026-04-10</th><td>0</td></tr><tr><th scope="row">2026-04-11</th><td>1</td></tr><tr><th scope="row">2026-04-12</th><td>0</td></tr><tr><th scope="row">2026-04-13</th><td>0</td></tr><tr><th scope="row">2026-04-14</th><td>0</td></tr><tr><th scope="row">2026-04-15</th><td>0</td></tr><tr><th scope="row">2026-04-16</th><td>0</td></tr><tr><th scope="row">2026-04-17</th><td>0</td></tr><tr><th scope="row">2026-04-18</th><td>0</td></tr><tr><th scope="row">2026-04-19</th><td>0</td></tr><tr><th scope="row">2026-04-20</th><td>0</td></tr><tr><th scope="row">2026-04-21</th><td>0</td></tr><tr><th scope="row">2026-04-22</th><td>0</td></tr><tr><th scope="row">2026-04-23</th><td>0</td></tr><tr><th scope="row">2026-04-24</th><td>0</td></tr><tr><th scope="row">2026-04-25</th><td>0</td></tr><tr><th scope="row">2026-04-26</th><td>0</td></tr><tr><th scope="row">2026-04-27</th><td>0</td></tr><tr><th scope="row">2026-04-28</th><td>0</td></tr><tr><th scope="row">2026-04-29</th><td>0</td></tr><tr><th scope="row">2026-04-30</th><td>0</td></tr><tr><th scope="row">2026-05-01</th><td>0</td></tr><tr><th scope="row">2026-05-02</th><td>0</td></tr><tr><th scope="row">2026-05-03</th><td>0</td></tr><tr><th scope="row">2026-05-04</th><td>0</td></tr><tr><th scope="row">2026-05-05</th><td>0</td></tr><tr><th scope="row">2026-05-06</th><td>0</td></tr><tr><th scope="row">2026-05-07</th><td>0</td></tr><tr><th scope="row">2026-05-08</th><td>0</td></tr><tr><th scope="row">2026-05-09</th><td>4</td></tr><tr><th scope="row">2026-05-10</th><td>0</td></tr><tr><th scope="row">2026-05-11</th><td>0</td></tr><tr><th scope="row">2026-05-12</th><td>0</td></tr><tr><th scope="row">2026-05-13</th><td>0</td></tr><tr><th scope="row">2026-05-14</th><td>0</td></tr><tr><th scope="row">2026-05-15</th><td>0</td></tr><tr><th scope="row">2026-05-16</th><td>0</td></tr><tr><th scope="row">2026-05-17</th><td>0</td></tr><tr><th scope="row">2026-05-18</th><td>0</td></tr><tr><th scope="row">2026-05-19</th><td>0</td></tr><tr><th scope="row">2026-05-20</th><td>0</td></tr><tr><th scope="row">2026-05-21</th><td>0</td></tr><tr><th scope="row">2026-05-22</th><td>0</td></tr><tr><th scope="row">2026-05-23</th><td>0</td></tr><tr><th scope="row">2026-05-24</th><td>0</td></tr><tr><th scope="row">2026-05-25</th><td>0</td></tr><tr><th scope="row">2026-05-26</th><td>0</td></tr><tr><th scope="row">2026-05-27</th><td>0</td></tr><tr><th scope="row">2026-05-28</th><td>0</td></tr><tr><th scope="row">2026-05-29</th><td>0</td></tr><tr><th scope="row">2026-05-30</th><td>0</td></tr><tr><th scope="row">2026-05-31</th><td>0</td></tr><tr><th scope="row">2026-06-01</th><td>0</td></tr><tr><th scope="row">2026-06-02</th><td>0</td></tr><tr><th scope="row">2026-06-03</th><td>0</td></tr><tr><th scope="row">2026-06-04</th><td>0</td></tr><tr><th scope="row">2026-06-05</th><td>0</td></tr><tr><th scope="row">2026-06-06</th><td>0</td></tr><tr><th scope="row">2026-06-07</th><td>0</td></tr><tr><th scope="row">2026-06-08</th><td>0</td></tr><tr><th scope="row">2026-06-09</th><td>0</td></tr><tr><th scope="row">2026-06-10</th><td>0</td></tr><tr><th scope="row">2026-06-11</th><td>0</td></tr><tr><th scope="row">2026-06-12</th><td>0</td></tr><tr><th scope="row">2026-06-13</th><td>0</td></tr><tr><th scope="row">2026-06-14</th><td>0</td></tr><tr><th scope="row">2026-06-15</th><td>0</td></tr><tr><th scope="row">2026-06-16</th><td>0</td></tr><tr><th scope="row">2026-06-17</th><td>0</td></tr><tr><th scope="row">2026-06-18</th><td>0</td></tr><tr><th scope="row">2026-06-19</th><td>0</td></tr><tr><th scope="row">2026-06-20</th><td>0</td></tr><tr><th scope="row">2026-06-21</th><td>0</td></tr><tr><th scope="row">2026-06-22</th><td>0</td></tr><tr><th scope="row">2026-06-23</th><td>0</td></tr><tr><th scope="row">2026-06-24</th><td>0</td></tr><tr><th scope="row">2026-06-25</th><td>0</td></tr><tr><th scope="row">2026-06-26</th><td>0</td></tr><tr><th scope="row">2026-06-27</th><td>0</td></tr><tr><th scope="row">2026-06-28</th><td>0</td></tr><tr><th scope="row">2026-06-29</th><td>0</td></tr><tr><th scope="row">2026-06-30</th><td>0</td></tr><tr><th scope="row">2026-07-01</th><td>0</td></tr><tr><th scope="row">2026-07-02</th><td>0</td></tr><tr><th scope="row">2026-07-03</th><td>0</td></tr><tr><th scope="row">2026-07-04</th><td>0</td></tr><tr><th scope="row">2026-07-05</th><td>0</td></tr><tr><th scope="row">2026-07-06</th><td>0</td></tr><tr><th scope="row">2026-07-07</th><td>0</td></tr><tr><th scope="row">2026-07-08</th><td>0</td></tr><tr><th scope="row">2026-07-09</th><td>0</td></tr><tr><th scope="row">2026-07-10</th><td>0</td></tr><tr><th scope="row">2026-07-11</th><td>0</td></tr><tr><th scope="row">2026-07-12</th><td>0</td></tr><tr><th scope="row">2026-07-13</th><td>0</td></tr><tr><th scope="row">2026-07-14</th><td>0</td></tr><tr><th scope="row">2026-07-15</th><td>0</td></tr><tr><th scope="row">2026-07-16</th><td>0</td></tr><tr><th scope="row">2026-07-17</th><td>0</td></tr><tr><th scope="row">2026-07-18</th><td>0</td></tr><tr><th scope="row">2026-07-19</th><td>0</td></tr><tr><th scope="row">2026-07-20</th><td>0</td></tr><tr><th scope="row">2026-07-21</th><td>0</td></tr><tr><th scope="row">2026-07-22</th><td>0</td></tr><tr><th scope="row">2026-07-23</th><td>0</td></tr><tr><th scope="row">2026-07-24</th><td>0</td></tr><tr><th scope="row">2026-07-25</th><td>0</td></tr><tr><th scope="row">2026-07-26</th><td>0</td></tr><tr><th scope="row">2026-07-27</th><td>0</td></tr><tr><th scope="row">2026-07-28</th><td>0</td></tr><tr><th scope="row">2026-07-29</th><td>0</td></tr><tr><th scope="row">2026-07-30</th><td>0</td></tr><tr><th scope="row">2026-07-31</th><td>0</td></tr><tr><th scope="row">2026-08-01</th><td>0</td></tr><tr><th scope="row">2026-08-02</th><td>0</td></tr><tr><th scope="row">2026-08-03</th><td>0</td></tr><tr><th scope="row">2026-08-04</th><td>0</td></tr><tr><th scope="row">2026-08-05</th><td>0</td></tr><tr><th scope="row">2026-08-06</th><td>0</td></tr><tr><th scope="row">2026-08-07</th><td>0</td></tr><tr><th scope="row">2026-08-08</th><td>0</td></tr><tr><th scope="row">2026-08-09</th><td>0</td></tr><tr><th scope="row">2026-08-10</th><td>0</td></tr><tr><th scope="row">2026-08-11</th><td>0</td></tr><tr><th scope="row">2026-08-12</th><td>0</td></tr><tr><th scope="row">2026-08-13</th><td>0</td></tr><tr><th scope="row">2026-08-14</th><td>0</td></tr><tr><th scope="row">2026-08-15</th><td>0</td></tr><tr><th scope="row">2026-08-16</th><td>0</td></tr><tr><th scope="row">2026-08-17</th><td>0</td></tr><tr><th scope="row">2026-08-18</th><td>0</td></tr><tr><th scope="row">2026-08-19</th><td>0</td></tr><tr><th scope="row">2026-08-20</th><td>0</td></tr><tr><th scope="row">2026-08-21</th><td>0</td></tr><tr><th scope="row">2026-08-22</th><td>0</td></tr><tr><th scope="row">2026-08-23</th><td>0</td></tr><tr><th scope="row">2026-08-24</th><td>0</td></tr><tr><th scope="row">2026-08-25</th><td>0</td></tr><tr><th scope="row">2026-08-26</th><td>0</td></tr><tr><th scope="row">2026-08-27</th><td>0</td></tr><tr><th scope="row">2026-08-28</th><td>0</td></tr><tr><th scope="row">2026-08-29</th><td>0</td></tr><tr><th scope="row">2026-08-30</th><td>0</td></tr><tr><th scope="row">2026-08-31</th><td>0</td></tr><tr><th scope="row">2026-09-01</th><td>0</td></tr><tr><th scope="row">2026-09-02</th><td>0</td></tr><tr><th scope="row">2026-09-03</th><td>0</td></tr><tr><th scope="row">2026-09-04</th><td>0</td></tr><tr><th scope="row">2026-09-05</th><td>0</td></tr><tr><th scope="row">2026-09-06</th><td>9</td></tr><tr><th scope="row">2026-09-07</th><td>0</td></tr><tr><th scope="row">2026-09-08</th><td>0</td></tr><tr><th scope="row">2026-09-09</th><td>0</td></tr><tr><th scope="row">2026-09-10</th><td>0</td></tr><tr><th scope="row">2026-09-11</th><td>0</td></tr><tr><th scope="row">2026-09-12</th><td>0</td></tr><tr><th scope="row">2026-09-13</th><td>1</td></tr><tr><th scope="row">2026-09-14</th><td>0</td></tr><tr><th scope="row">2026-09-15</th><td>0</td></tr><tr><th scope="row">2026-09-16</th><td>0</td></tr><tr><th scope="row">2026-09-17</th><td>0</td></tr><tr><th scope="row">2026-09-18</th><td>0</td></tr><tr><th scope="row">2026-09-19</th><td>0</td></tr><tr><th scope="row">2026-09-20</th><td>0</td></tr><tr><th scope="row">2026-09-21</th><td>0</td></tr><tr><th scope="row">2026-09-22</th><td>0</td></tr><tr><th scope="row">2026-09-23</th><td>0</td></tr><tr><th scope="row">2026-09-24</th><td>0</td></tr><tr><th scope="row">2026-09-25</th><td>0</td></tr><tr><th scope="row">2026-09-26</th><td>0</td></tr><tr><th scope="row">2026-09-27</th><td>0</td></tr><tr><th scope="row">2026-09-28</th><td>0</td></tr><tr><th scope="row">2026-09-29</th><td>0</td></tr><tr><th scope="row">2026-09-30</th><td>0</td></tr><tr><th scope="row">2026-10-01</th><td>0</td></tr><tr><th scope="row">2026-10-02</th><td>0</td></tr><tr><th scope="row">2026-10-03</th><td>0</td></tr><tr><th scope="row">2026-10-04</th><td>0</td></tr><tr><th scope="row">2026-10-05</th><td>0</td></tr><tr><th scope="row">2026-10-06</th><td>0</td></tr><tr><th scope="row">2026-10-07</th><td>0</td></tr><tr><th scope="row">2026-10-08</th><td>0</td></tr><tr><th scope="row">2026-10-09</th><td>0</td></tr><tr><th scope="row">2026-10-10</th><td>0</td></tr><tr><th scope="row">2026-10-11</th><td>7</td></tr></tbody></table></div></section></section><section id="skills" class="section split"><div><p class="eyebrow mono-eyebrow">Skills</p><h2>Architecture, security & data.</h2></div><div class="chips"><span>C#</span><span>.NET 8/10</span><span>ASP.NET Core</span><span>Java</span><span>Spring Boot</span><span>EF Core</span><span>MediatR</span><span>FluentValidation</span><span>Clean Architecture</span><span>CQRS</span><span>DDD</span><span>Oracle PL/SQL</span><span>PostgreSQL</span><span>SQL Server</span><span>RBAC/ABAC</span><span>TOTP</span><span>PBKDF2</span><span>xUnit</span><span>Moq</span><span>Docker</span><span>Python</span><span>PowerShell</span></div></section><section id="background" class="section" aria-labelledby="background-heading"><p class="eyebrow">Background</p><h2 id="background-heading">Education &amp; learning</h2><div class="background-grid"><article class="feature-card education-card"><span class="feature-index">Education</span><h3>B.Sc. Computer Engineering</h3><p>Software Engineering<br>Zanjan Vocational Technical University<br><span class="muted">National University of Skills</span></p><div class="degree-detail"><span>GPA</span><strong>18.47 / 20</strong></div></article><article class="feature-card learning-card"><span class="feature-index">Certifications &amp; coursework</span><h3>Continued learning</h3><ul class="learning-list"><li><strong>HackerRank</strong><span>Software Engineer · Java · SQL · Python</span></li><li><strong>IBM</strong><span>Python for Data Science &amp; AI</span></li><li><strong>Maktabkhooneh</strong><span>Introduction to Programming with Java</span></li></ul></article></div></section><section class="section quote"><p>“My focus is building maintainable enterprise systems through strict governance, automation, rigorous testing, and clean code practices.”</p></section><section id="contact" class="section contact"><div><p class="eyebrow mono-eyebrow">Contact</p><h2>Let’s build reliable backend systems.</h2><p class="muted">Open to backend engineering opportunities in enterprise SaaS, fintech, healthcare systems, and database-heavy products.</p></div><div class="contact-links"><a href="mailto:kianalmasi0@gmail.com">kianalmasi0@gmail.com</a><a href="https://github.com/kian-al">github.com/kian-al</a><a href="https://www.linkedin.com/in/kian-almasi">linkedin.com/in/kian-almasi</a></div></section></main><footer>© 2026 Kian Almasi · Designed as a fast, responsive GitHub Pages resume.</footer><script>
 (function(){
 var out=document.getElementById('term-output');
 var input=document.getElementById('term-input');
@@ -59,4 +914,4 @@ document.querySelectorAll('.swatch').forEach(function(b){b.addEventListener('cli
 // Ready immediately: no boot animation or auto-typed demo.
 print(['Welcome. Choose a shortcut or type help to get started.'],'term-dim');
 })();
-</script><script type="application/json" id="github-snapshot">{"fetchedAt": "2026-10-11T12:20:11.947760+00:00", "profile": {"login": "kian-al", "public_repos": 32, "followers": 10}, "repos": [{"name": "kian-almasi.github.io", "description": null, "language": "HTML", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2026-10-11T12:10:16Z"}, {"name": "orleans", "description": "Cloud Native application framework for .NET", "language": null, "stargazers_count": 0, "fork": true, "archived": false, "updated_at": "2026-09-13T07:32:49Z"}, {"name": "CPU-Scheduling-Algorithms", "description": "This repository contains implementations of common CPU Scheduling Algorithms using C#.", "language": "C#", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2026-05-09T13:26:16Z"}, {"name": "mcp", "description": "Catalog of official Microsoft MCP (Model Context Protocol) server implementations for AI-powered data access and tool integration", "language": null, "stargazers_count": 0, "fork": true, "archived": false, "updated_at": "2026-04-11T11:39:30Z"}, {"name": "Car-Price-Estimation-Full-Stack-Project", "description": "A full-stack car price estimation system using React, Tailwind, Python Django, and Machine Learning. Includes authentication, dashboard, ML-powered price prediction, and modern UI components.", "language": "TypeScript", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2026-02-08T20:39:58Z"}, {"name": "Cron-Fund", "description": "Automated NAV Fetching System for Investment Funds A modular .NET console application that automatically fetches and stores daily NAV (Net Asset Value) data from multiple providers such as Rayan and Tadbir. Built using Clean Architecture for scalable and extensible fund data integration.", "language": "C#", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2026-02-07T11:12:52Z"}, {"name": "Todo", "description": "A full-stack TODO application built with Spring Boot and Angular. This project includes RESTful APIs for task management, database integration, and a modern Angular UI for creating, updating, and tracking daily tasks.", "language": "Java", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-12-08T09:03:52Z"}, {"name": "temperature-monitor", "description": "A smart IoT temperature and humidity monitoring system using ESP32, DHT22 sensor, buzzer, LED alerts, and physical button with MicroPython. Includes real-time critical temperature alarm and Wokwi simulation support.", "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-12-02T16:14:20Z"}, {"name": "flash-card", "description": "A simple and interactive Flash Cards app built with HTML, CSS, and JavaScript. Create, manage, and review cards to improve your learning experience.", "language": "JavaScript", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-12-02T16:04:45Z"}, {"name": "LibraryProject", "description": "A full-stack book store application built with Spring Boot, React, Docker, and Playwright. Includes clean architecture, RESTful APIs, containerized deployment, and end-to-end testing.", "language": "Java", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-12-01T12:33:58Z"}, {"name": "SpringPractice", "description": "A simple Spring Boot practice project showcasing basic RESTful APIs, path variables, request validation, and JSON handling. Includes examples of GET and POST endpoints for learning and experimentation.", "language": "Java", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-30T13:29:50Z"}, {"name": "Contact-Manager", "description": "Python Contact Manager with CLI-based CRUD operations, supporting both PostgreSQL and CSV storage.", "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-29T20:29:13Z"}, {"name": "Task-Manager-Program", "description": "A simple **Task Manager application** built with **Java** and **Maven**.   This program allows users to add, view, and delete tasks.  ", "language": "Java", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-27T23:28:42Z"}, {"name": "database-project", "description": "In this repository, I put all kinds of projects that I did with the database", "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-27T21:30:30Z"}, {"name": "health-program", "description": null, "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-26T20:17:00Z"}, {"name": "Registration-page", "description": null, "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-26T20:14:17Z"}, {"name": "Employee-information-sorting", "description": null, "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-26T20:12:52Z"}, {"name": "Other-projects", "description": "In this repository, I put all kinds of small projects that I did", "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-26T20:11:49Z"}, {"name": "project", "description": null, "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-26T20:10:49Z"}, {"name": "real-time-chat", "description": "just for fun", "language": "HTML", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-26T20:09:48Z"}, {"name": "radman-site", "description": "Radman-site to this repository saved radman company website now step 1 your most run \" python3 -m venv venv \" step 2 \" source venv/bin/activate \" step 3 \" pip install -r  requirements.txt \"", "language": "HTML", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-26T20:08:26Z"}, {"name": "Face-Emotion-Recognition-", "description": null, "language": null, "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-11-26T20:05:05Z"}, {"name": "javaFood", "description": "JavaFood is a learning project that demonstrates core concepts of Java programming, object-oriented design, and unit testing. It includes models, services, and controllers for managing foods, orders, and discounts.", "language": "Java", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-10-02T09:03:38Z"}, {"name": "My-Java-programming-practice-exercises", "description": "This repository contains a collection of practice problems, examples, and mini-projects I’ve worked on while learning the Java programming language. The goal is to document my learning journey and reinforce core and advanced Java concepts.", "language": "Java", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-09-09T16:30:20Z"}, {"name": "The-price-of-the-car", "description": "Python scripts to scrape and analyze car prices from Hamrah Mechanic using machine learning.", "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-04-20T10:17:53Z"}, {"name": "sing-up-page", "description": "This repository contains a simple sign-up form implemented in Java using Swing for the graphical user interface.", "language": "Java", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-04-08T18:28:12Z"}, {"name": "calculator", "description": "This repository contains a simple calculator application built in Java using Swing for the graphical user interface (GUI).", "language": "Java", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-04-08T18:27:58Z"}, {"name": "Company-Management-System", "description": "This repository contains a Java-based company management system that utilizes Object-Oriented Programming (OOP) principles.", "language": "Java", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-04-08T18:27:42Z"}, {"name": "search-movie", "description": "This is a simple movie search application that allows users to search for movies by name or ID using the OMDb API.", "language": "HTML", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2025-04-08T18:27:22Z"}, {"name": "java-bootcamp", "description": "This repository is a collaborative learning space for mastering Java from the basics to advanced topics", "language": "Java", "stargazers_count": 0, "fork": true, "archived": false, "updated_at": "2025-03-28T18:10:41Z"}, {"name": "truecar-website-Scraper", "description": null, "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2024-04-07T22:00:48Z"}, {"name": "Bitcoin-and-dollar-price-program", "description": null, "language": "Python", "stargazers_count": 0, "fork": false, "archived": false, "updated_at": "2024-04-07T11:26:40Z"}], "events": [{"type": "PushEvent", "repo": {"name": "kian-al/kian-almasi.github.io"}, "created_at": "2026-10-11T12:06:16Z"}, {"type": "PushEvent", "repo": {"name": "kian-al/kian-almasi.github.io"}, "created_at": "2026-10-11T11:58:49Z"}, {"type": "PushEvent", "repo": {"name": "kian-al/kian-almasi.github.io"}, "created_at": "2026-10-11T11:44:31Z"}, {"type": "PublicEvent", "repo": {"name": "kian-al/kian-almasi.github.io"}, "created_at": "2026-09-06T12:06:33Z"}, {"type": "WatchEvent", "repo": {"name": "devxhub/awesome-book-collection"}, "created_at": "2026-09-19T08:26:23Z"}, {"type": "WatchEvent", "repo": {"name": "github/spec-kit"}, "created_at": "2026-09-15T13:07:43Z"}, {"type": "WatchEvent", "repo": {"name": "DeusData/codebase-memory-mcp"}, "created_at": "2026-09-15T12:42:39Z"}, {"type": "ForkEvent", "repo": {"name": "dotnet/orleans"}, "created_at": "2026-09-13T07:32:49Z"}]}</script></body></html>
+</script><script type="application/json" id="github-snapshot">{"fetchedAt":"2026-10-11T12:20:11.947760+00:00","profile":{"login":"kian-al","public_repos":32,"followers":10},"repos":[{"name":"kian-almasi.github.io","stargazers_count":0,"fork":false},{"name":"orleans","stargazers_count":0,"fork":true},{"name":"CPU-Scheduling-Algorithms","stargazers_count":0,"fork":false},{"name":"mcp","stargazers_count":0,"fork":true},{"name":"Car-Price-Estimation-Full-Stack-Project","stargazers_count":0,"fork":false},{"name":"Cron-Fund","stargazers_count":0,"fork":false},{"name":"Todo","stargazers_count":0,"fork":false},{"name":"temperature-monitor","stargazers_count":0,"fork":false},{"name":"flash-card","stargazers_count":0,"fork":false},{"name":"LibraryProject","stargazers_count":0,"fork":false},{"name":"SpringPractice","stargazers_count":0,"fork":false},{"name":"Contact-Manager","stargazers_count":0,"fork":false},{"name":"Task-Manager-Program","stargazers_count":0,"fork":false},{"name":"database-project","stargazers_count":0,"fork":false},{"name":"health-program","stargazers_count":0,"fork":false},{"name":"Registration-page","stargazers_count":0,"fork":false},{"name":"Employee-information-sorting","stargazers_count":0,"fork":false},{"name":"Other-projects","stargazers_count":0,"fork":false},{"name":"project","stargazers_count":0,"fork":false},{"name":"real-time-chat","stargazers_count":0,"fork":false},{"name":"radman-site","stargazers_count":0,"fork":false},{"name":"Face-Emotion-Recognition-","stargazers_count":0,"fork":false},{"name":"javaFood","stargazers_count":0,"fork":false},{"name":"My-Java-programming-practice-exercises","stargazers_count":0,"fork":false},{"name":"The-price-of-the-car","stargazers_count":0,"fork":false},{"name":"sing-up-page","stargazers_count":0,"fork":false},{"name":"calculator","stargazers_count":0,"fork":false},{"name":"Company-Management-System","stargazers_count":0,"fork":false},{"name":"search-movie","stargazers_count":0,"fork":false},{"name":"java-bootcamp","stargazers_count":0,"fork":true},{"name":"truecar-website-Scraper","stargazers_count":0,"fork":false},{"name":"Bitcoin-and-dollar-price-program","stargazers_count":0,"fork":false}]}</script><script type="application/json" id="contribution-snapshot">{"fetchedAt":"2026-10-11T12:35:09.414138+00:00","total":105,"days":[{"date":"2025-10-12","count":0,"level":0},{"date":"2025-10-13","count":0,"level":0},{"date":"2025-10-14","count":0,"level":0},{"date":"2025-10-15","count":0,"level":0},{"date":"2025-10-16","count":0,"level":0},{"date":"2025-10-17","count":0,"level":0},{"date":"2025-10-18","count":0,"level":0},{"date":"2025-10-19","count":0,"level":0},{"date":"2025-10-20","count":0,"level":0},{"date":"2025-10-21","count":0,"level":0},{"date":"2025-10-22","count":0,"level":0},{"date":"2025-10-23","count":0,"level":0},{"date":"2025-10-24","count":0,"level":0},{"date":"2025-10-25","count":0,"level":0},{"date":"2025-10-26","count":0,"level":0},{"date":"2025-10-27","count":0,"level":0},{"date":"2025-10-28","count":0,"level":0},{"date":"2025-10-29","count":0,"level":0},{"date":"2025-10-30","count":0,"level":0},{"date":"2025-10-31","count":0,"level":0},{"date":"2025-11-01","count":0,"level":0},{"date":"2025-11-02","count":0,"level":0},{"date":"2025-11-03","count":0,"level":0},{"date":"2025-11-04","count":0,"level":0},{"date":"2025-11-05","count":0,"level":0},{"date":"2025-11-06","count":1,"level":1},{"date":"2025-11-07","count":10,"level":4},{"date":"2025-11-08","count":2,"level":1},{"date":"2025-11-09","count":0,"level":0},{"date":"2025-11-10","count":0,"level":0},{"date":"2025-11-11","count":0,"level":0},{"date":"2025-11-12","count":0,"level":0},{"date":"2025-11-13","count":0,"level":0},{"date":"2025-11-14","count":0,"level":0},{"date":"2025-11-15","count":0,"level":0},{"date":"2025-11-16","count":2,"level":1},{"date":"2025-11-17","count":0,"level":0},{"date":"2025-11-18","count":0,"level":0},{"date":"2025-11-19","count":3,"level":2},{"date":"2025-11-20","count":0,"level":0},{"date":"2025-11-21","count":0,"level":0},{"date":"2025-11-22","count":4,"level":2},{"date":"2025-11-23","count":0,"level":0},{"date":"2025-11-24","count":4,"level":2},{"date":"2025-11-25","count":0,"level":0},{"date":"2025-11-26","count":2,"level":1},{"date":"2025-11-27","count":1,"level":1},{"date":"2025-11-28","count":7,"level":4},{"date":"2025-11-29","count":6,"level":3},{"date":"2025-11-30","count":5,"level":3},{"date":"2025-12-01","count":4,"level":2},{"date":"2025-12-02","count":7,"level":4},{"date":"2025-12-03","count":0,"level":0},{"date":"2025-12-04","count":8,"level":4},{"date":"2025-12-05","count":1,"level":1},{"date":"2025-12-06","count":0,"level":0},{"date":"2025-12-07","count":1,"level":1},{"date":"2025-12-08","count":1,"level":1},{"date":"2025-12-09","count":0,"level":0},{"date":"2025-12-10","count":0,"level":0},{"date":"2025-12-11","count":0,"level":0},{"date":"2025-12-12","count":0,"level":0},{"date":"2025-12-13","count":0,"level":0},{"date":"2025-12-14","count":0,"level":0},{"date":"2025-12-15","count":0,"level":0},{"date":"2025-12-16","count":0,"level":0},{"date":"2025-12-17","count":0,"level":0},{"date":"2025-12-18","count":0,"level":0},{"date":"2025-12-19","count":0,"level":0},{"date":"2025-12-20","count":0,"level":0},{"date":"2025-12-21","count":0,"level":0},{"date":"2025-12-22","count":0,"level":0},{"date":"2025-12-23","count":0,"level":0},{"date":"2025-12-24","count":0,"level":0},{"date":"2025-12-25","count":0,"level":0},{"date":"2025-12-26","count":0,"level":0},{"date":"2025-12-27","count":0,"level":0},{"date":"2025-12-28","count":0,"level":0},{"date":"2025-12-29","count":0,"level":0},{"date":"2025-12-30","count":0,"level":0},{"date":"2025-12-31","count":0,"level":0},{"date":"2026-01-01","count":0,"level":0},{"date":"2026-01-02","count":0,"level":0},{"date":"2026-01-03","count":0,"level":0},{"date":"2026-01-04","count":0,"level":0},{"date":"2026-01-05","count":0,"level":0},{"date":"2026-01-06","count":0,"level":0},{"date":"2026-01-07","count":0,"level":0},{"date":"2026-01-08","count":0,"level":0},{"date":"2026-01-09","count":0,"level":0},{"date":"2026-01-10","count":0,"level":0},{"date":"2026-01-11","count":0,"level":0},{"date":"2026-01-12","count":0,"level":0},{"date":"2026-01-13","count":0,"level":0},{"date":"2026-01-14","count":0,"level":0},{"date":"2026-01-15","count":0,"level":0},{"date":"2026-01-16","count":0,"level":0},{"date":"2026-01-17","count":0,"level":0},{"date":"2026-01-18","count":0,"level":0},{"date":"2026-01-19","count":0,"level":0},{"date":"2026-01-20","count":0,"level":0},{"date":"2026-01-21","count":0,"level":0},{"date":"2026-01-22","count":0,"level":0},{"date":"2026-01-23","count":0,"level":0},{"date":"2026-01-24","count":0,"level":0},{"date":"2026-01-25","count":0,"level":0},{"date":"2026-01-26","count":0,"level":0},{"date":"2026-01-27","count":0,"level":0},{"date":"2026-01-28","count":0,"level":0},{"date":"2026-01-29","count":0,"level":0},{"date":"2026-01-30","count":0,"level":0},{"date":"2026-01-31","count":0,"level":0},{"date":"2026-02-01","count":0,"level":0},{"date":"2026-02-02","count":0,"level":0},{"date":"2026-02-03","count":0,"level":0},{"date":"2026-02-04","count":0,"level":0},{"date":"2026-02-05","count":0,"level":0},{"date":"2026-02-06","count":3,"level":2},{"date":"2026-02-07","count":9,"level":4},{"date":"2026-02-08","count":1,"level":1},{"date":"2026-02-09","count":1,"level":1},{"date":"2026-02-10","count":0,"level":0},{"date":"2026-02-11","count":0,"level":0},{"date":"2026-02-12","count":0,"level":0},{"date":"2026-02-13","count":0,"level":0},{"date":"2026-02-14","count":0,"level":0},{"date":"2026-02-15","count":0,"level":0},{"date":"2026-02-16","count":0,"level":0},{"date":"2026-02-17","count":0,"level":0},{"date":"2026-02-18","count":0,"level":0},{"date":"2026-02-19","count":0,"level":0},{"date":"2026-02-20","count":0,"level":0},{"date":"2026-02-21","count":0,"level":0},{"date":"2026-02-22","count":0,"level":0},{"date":"2026-02-23","count":0,"level":0},{"date":"2026-02-24","count":0,"level":0},{"date":"2026-02-25","count":0,"level":0},{"date":"2026-02-26","count":0,"level":0},{"date":"2026-02-27","count":0,"level":0},{"date":"2026-02-28","count":0,"level":0},{"date":"2026-03-01","count":0,"level":0},{"date":"2026-03-02","count":0,"level":0},{"date":"2026-03-03","count":0,"level":0},{"date":"2026-03-04","count":0,"level":0},{"date":"2026-03-05","count":0,"level":0},{"date":"2026-03-06","count":0,"level":0},{"date":"2026-03-07","count":0,"level":0},{"date":"2026-03-08","count":0,"level":0},{"date":"2026-03-09","count":0,"level":0},{"date":"2026-03-10","count":0,"level":0},{"date":"2026-03-11","count":0,"level":0},{"date":"2026-03-12","count":0,"level":0},{"date":"2026-03-13","count":0,"level":0},{"date":"2026-03-14","count":0,"level":0},{"date":"2026-03-15","count":0,"level":0},{"date":"2026-03-16","count":0,"level":0},{"date":"2026-03-17","count":0,"level":0},{"date":"2026-03-18","count":0,"level":0},{"date":"2026-03-19","count":0,"level":0},{"date":"2026-03-20","count":0,"level":0},{"date":"2026-03-21","count":0,"level":0},{"date":"2026-03-22","count":0,"level":0},{"date":"2026-03-23","count":0,"level":0},{"date":"2026-03-24","count":0,"level":0},{"date":"2026-03-25","count":0,"level":0},{"date":"2026-03-26","count":0,"level":0},{"date":"2026-03-27","count":0,"level":0},{"date":"2026-03-28","count":0,"level":0},{"date":"2026-03-29","count":0,"level":0},{"date":"2026-03-30","count":0,"level":0},{"date":"2026-03-31","count":0,"level":0},{"date":"2026-04-01","count":0,"level":0},{"date":"2026-04-02","count":0,"level":0},{"date":"2026-04-03","count":0,"level":0},{"date":"2026-04-04","count":0,"level":0},{"date":"2026-04-05","count":0,"level":0},{"date":"2026-04-06","count":0,"level":0},{"date":"2026-04-07","count":0,"level":0},{"date":"2026-04-08","count":0,"level":0},{"date":"2026-04-09","count":0,"level":0},{"date":"2026-04-10","count":0,"level":0},{"date":"2026-04-11","count":1,"level":1},{"date":"2026-04-12","count":0,"level":0},{"date":"2026-04-13","count":0,"level":0},{"date":"2026-04-14","count":0,"level":0},{"date":"2026-04-15","count":0,"level":0},{"date":"2026-04-16","count":0,"level":0},{"date":"2026-04-17","count":0,"level":0},{"date":"2026-04-18","count":0,"level":0},{"date":"2026-04-19","count":0,"level":0},{"date":"2026-04-20","count":0,"level":0},{"date":"2026-04-21","count":0,"level":0},{"date":"2026-04-22","count":0,"level":0},{"date":"2026-04-23","count":0,"level":0},{"date":"2026-04-24","count":0,"level":0},{"date":"2026-04-25","count":0,"level":0},{"date":"2026-04-26","count":0,"level":0},{"date":"2026-04-27","count":0,"level":0},{"date":"2026-04-28","count":0,"level":0},{"date":"2026-04-29","count":0,"level":0},{"date":"2026-04-30","count":0,"level":0},{"date":"2026-05-01","count":0,"level":0},{"date":"2026-05-02","count":0,"level":0},{"date":"2026-05-03","count":0,"level":0},{"date":"2026-05-04","count":0,"level":0},{"date":"2026-05-05","count":0,"level":0},{"date":"2026-05-06","count":0,"level":0},{"date":"2026-05-07","count":0,"level":0},{"date":"2026-05-08","count":0,"level":0},{"date":"2026-05-09","count":4,"level":2},{"date":"2026-05-10","count":0,"level":0},{"date":"2026-05-11","count":0,"level":0},{"date":"2026-05-12","count":0,"level":0},{"date":"2026-05-13","count":0,"level":0},{"date":"2026-05-14","count":0,"level":0},{"date":"2026-05-15","count":0,"level":0},{"date":"2026-05-16","count":0,"level":0},{"date":"2026-05-17","count":0,"level":0},{"date":"2026-05-18","count":0,"level":0},{"date":"2026-05-19","count":0,"level":0},{"date":"2026-05-20","count":0,"level":0},{"date":"2026-05-21","count":0,"level":0},{"date":"2026-05-22","count":0,"level":0},{"date":"2026-05-23","count":0,"level":0},{"date":"2026-05-24","count":0,"level":0},{"date":"2026-05-25","count":0,"level":0},{"date":"2026-05-26","count":0,"level":0},{"date":"2026-05-27","count":0,"level":0},{"date":"2026-05-28","count":0,"level":0},{"date":"2026-05-29","count":0,"level":0},{"date":"2026-05-30","count":0,"level":0},{"date":"2026-05-31","count":0,"level":0},{"date":"2026-06-01","count":0,"level":0},{"date":"2026-06-02","count":0,"level":0},{"date":"2026-06-03","count":0,"level":0},{"date":"2026-06-04","count":0,"level":0},{"date":"2026-06-05","count":0,"level":0},{"date":"2026-06-06","count":0,"level":0},{"date":"2026-06-07","count":0,"level":0},{"date":"2026-06-08","count":0,"level":0},{"date":"2026-06-09","count":0,"level":0},{"date":"2026-06-10","count":0,"level":0},{"date":"2026-06-11","count":0,"level":0},{"date":"2026-06-12","count":0,"level":0},{"date":"2026-06-13","count":0,"level":0},{"date":"2026-06-14","count":0,"level":0},{"date":"2026-06-15","count":0,"level":0},{"date":"2026-06-16","count":0,"level":0},{"date":"2026-06-17","count":0,"level":0},{"date":"2026-06-18","count":0,"level":0},{"date":"2026-06-19","count":0,"level":0},{"date":"2026-06-20","count":0,"level":0},{"date":"2026-06-21","count":0,"level":0},{"date":"2026-06-22","count":0,"level":0},{"date":"2026-06-23","count":0,"level":0},{"date":"2026-06-24","count":0,"level":0},{"date":"2026-06-25","count":0,"level":0},{"date":"2026-06-26","count":0,"level":0},{"date":"2026-06-27","count":0,"level":0},{"date":"2026-06-28","count":0,"level":0},{"date":"2026-06-29","count":0,"level":0},{"date":"2026-06-30","count":0,"level":0},{"date":"2026-07-01","count":0,"level":0},{"date":"2026-07-02","count":0,"level":0},{"date":"2026-07-03","count":0,"level":0},{"date":"2026-07-04","count":0,"level":0},{"date":"2026-07-05","count":0,"level":0},{"date":"2026-07-06","count":0,"level":0},{"date":"2026-07-07","count":0,"level":0},{"date":"2026-07-08","count":0,"level":0},{"date":"2026-07-09","count":0,"level":0},{"date":"2026-07-10","count":0,"level":0},{"date":"2026-07-11","count":0,"level":0},{"date":"2026-07-12","count":0,"level":0},{"date":"2026-07-13","count":0,"level":0},{"date":"2026-07-14","count":0,"level":0},{"date":"2026-07-15","count":0,"level":0},{"date":"2026-07-16","count":0,"level":0},{"date":"2026-07-17","count":0,"level":0},{"date":"2026-07-18","count":0,"level":0},{"date":"2026-07-19","count":0,"level":0},{"date":"2026-07-20","count":0,"level":0},{"date":"2026-07-21","count":0,"level":0},{"date":"2026-07-22","count":0,"level":0},{"date":"2026-07-23","count":0,"level":0},{"date":"2026-07-24","count":0,"level":0},{"date":"2026-07-25","count":0,"level":0},{"date":"2026-07-26","count":0,"level":0},{"date":"2026-07-27","count":0,"level":0},{"date":"2026-07-28","count":0,"level":0},{"date":"2026-07-29","count":0,"level":0},{"date":"2026-07-30","count":0,"level":0},{"date":"2026-07-31","count":0,"level":0},{"date":"2026-08-01","count":0,"level":0},{"date":"2026-08-02","count":0,"level":0},{"date":"2026-08-03","count":0,"level":0},{"date":"2026-08-04","count":0,"level":0},{"date":"2026-08-05","count":0,"level":0},{"date":"2026-08-06","count":0,"level":0},{"date":"2026-08-07","count":0,"level":0},{"date":"2026-08-08","count":0,"level":0},{"date":"2026-08-09","count":0,"level":0},{"date":"2026-08-10","count":0,"level":0},{"date":"2026-08-11","count":0,"level":0},{"date":"2026-08-12","count":0,"level":0},{"date":"2026-08-13","count":0,"level":0},{"date":"2026-08-14","count":0,"level":0},{"date":"2026-08-15","count":0,"level":0},{"date":"2026-08-16","count":0,"level":0},{"date":"2026-08-17","count":0,"level":0},{"date":"2026-08-18","count":0,"level":0},{"date":"2026-08-19","count":0,"level":0},{"date":"2026-08-20","count":0,"level":0},{"date":"2026-08-21","count":0,"level":0},{"date":"2026-08-22","count":0,"level":0},{"date":"2026-08-23","count":0,"level":0},{"date":"2026-08-24","count":0,"level":0},{"date":"2026-08-25","count":0,"level":0},{"date":"2026-08-26","count":0,"level":0},{"date":"2026-08-27","count":0,"level":0},{"date":"2026-08-28","count":0,"level":0},{"date":"2026-08-29","count":0,"level":0},{"date":"2026-08-30","count":0,"level":0},{"date":"2026-08-31","count":0,"level":0},{"date":"2026-09-01","count":0,"level":0},{"date":"2026-09-02","count":0,"level":0},{"date":"2026-09-03","count":0,"level":0},{"date":"2026-09-04","count":0,"level":0},{"date":"2026-09-05","count":0,"level":0},{"date":"2026-09-06","count":9,"level":4},{"date":"2026-09-07","count":0,"level":0},{"date":"2026-09-08","count":0,"level":0},{"date":"2026-09-09","count":0,"level":0},{"date":"2026-09-10","count":0,"level":0},{"date":"2026-09-11","count":0,"level":0},{"date":"2026-09-12","count":0,"level":0},{"date":"2026-09-13","count":1,"level":1},{"date":"2026-09-14","count":0,"level":0},{"date":"2026-09-15","count":0,"level":0},{"date":"2026-09-16","count":0,"level":0},{"date":"2026-09-17","count":0,"level":0},{"date":"2026-09-18","count":0,"level":0},{"date":"2026-09-19","count":0,"level":0},{"date":"2026-09-20","count":0,"level":0},{"date":"2026-09-21","count":0,"level":0},{"date":"2026-09-22","count":0,"level":0},{"date":"2026-09-23","count":0,"level":0},{"date":"2026-09-24","count":0,"level":0},{"date":"2026-09-25","count":0,"level":0},{"date":"2026-09-26","count":0,"level":0},{"date":"2026-09-27","count":0,"level":0},{"date":"2026-09-28","count":0,"level":0},{"date":"2026-09-29","count":0,"level":0},{"date":"2026-09-30","count":0,"level":0},{"date":"2026-10-01","count":0,"level":0},{"date":"2026-10-02","count":0,"level":0},{"date":"2026-10-03","count":0,"level":0},{"date":"2026-10-04","count":0,"level":0},{"date":"2026-10-05","count":0,"level":0},{"date":"2026-10-06","count":0,"level":0},{"date":"2026-10-07","count":0,"level":0},{"date":"2026-10-08","count":0,"level":0},{"date":"2026-10-09","count":0,"level":0},{"date":"2026-10-10","count":0,"level":0},{"date":"2026-10-11","count":7,"level":4}],"source":"https://github.com/users/kian-al/contributions"}</script></body></html>
